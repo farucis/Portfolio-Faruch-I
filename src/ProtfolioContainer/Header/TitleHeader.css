@@ -1,0 +1,54 @@
+.title-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 10%;
+  min-height: fit-content;
+}
+
+.title-header-container h1 {
+  font-size: 38px;
+  margin: 65px 0 0 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+}
+.title-header-container p {
+  font-size: 16px;
+  margin: 10px 0 0 0;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.title-header-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 300px;
+}
+.title-header-image-backround {
+  height: 92%;
+  width: 80%;
+  background-size: contain;
+
+  background-image: url("../../assets/statusBar.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 375px) {
+  .title-header-container h1 {
+    font-size: 32px;
+  }
+  .title-header-container p {
+    font-size: 15px;
+  }
+  .title-header-image {
+    width: 240px;
+  }
+  .title-header-image-backround {
+    width: 80%;
+  }
+}
