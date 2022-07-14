@@ -12,6 +12,9 @@
     "react-typical": "^0.1.3",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
