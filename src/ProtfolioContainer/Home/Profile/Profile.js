@@ -1,4 +1,5 @@
 import React from "react";
+import Typical from "react-typical";
 
 import "./Profile.css";
 
@@ -32,7 +33,9 @@ const Profile = () => {
             <span className="primary-text">
               {" "}
               <h1>
-
+                <Typical
+                  loop={Infinity}
+                  steps={[
                     "Full Stack Developer 💻",
                     1000,
                     "Software Engineer 🖥",
@@ -43,7 +46,8 @@ const Profile = () => {
                     1000,
                     "ASP.NET Dev 🌐",
                     1000,
-
+                  ]}
+                />
               </h1>
               <span className="profile-role-tagline">
                 knack of building applictions with front end back end
