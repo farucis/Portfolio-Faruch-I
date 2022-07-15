@@ -83,7 +83,7 @@
   color: #111;
 }
 
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 1280px) {
   .aboutCard-parent {
     width: 90%;
     height: 550px;
