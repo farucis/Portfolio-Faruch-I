@@ -5,7 +5,7 @@ import Profile from './Profile/Profile';
 
 const Home = () => {
     return (
-        <div className='home-container'>
+        <div className='home-container' id='home'>
             <Profile />
             <Footer />
             

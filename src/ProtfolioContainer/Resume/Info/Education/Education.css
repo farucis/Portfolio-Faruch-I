@@ -1,0 +1,49 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
+.education-place {
+  padding-inline: 30px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.education-name-dot h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0cbfae;
+  margin: 0 0px 0px 20px;
+}
+.education-name-dot {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+.education-name h2 {
+  margin: 6px 0px 0px 42px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.education-year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0cbfae;
+  height: 40%;
+  width: 100px;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.education-year h1 {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 500;
+    color: #fff;
+}

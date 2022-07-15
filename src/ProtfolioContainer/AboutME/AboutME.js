@@ -4,7 +4,7 @@ import AboutCard from "./AboutCard/AboutCard";
 
 const AboutME = () => {
   return (
-    <div className="about-me-container">
+    <div className="about-me-container" id='aboutMe'>
       <div className="about-me-parent">
         <TitleHeader title="About Me" subTitle="Why Choose Me?" />
         <AboutCard />

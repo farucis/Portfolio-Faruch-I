@@ -1,0 +1,253 @@
+.resume-options {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 48%;
+  height: 100%;
+  justify-content: space-between;
+  box-shadow: 4px 2px 5px -2px rgba(0, 0, 0, 0.582);
+  z-index: 20;
+}
+.resume-options-icons {
+  display: flex;
+  align-self: baseline;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 36px;
+  height: 100%;
+  background-color: #22254b;
+  padding: 30px 0 30px 0;
+}
+.resume-options-icons-icon a {
+  display: flex;
+  align-items: center;
+  font-size: larger;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  color: whitesmoke;
+}
+.resume-options-icons-icon a:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-out;
+  width: 40px;
+}
+.resume-options-2 {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  align-self: baseline;
+  margin-left: 2px;
+}
+.resume-options-text {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  height: 34px;
+  margin-left: 30px;
+  color: #22254b;
+  transition: all 0.3s ease-in-out;
+}
+.resume-options-text a {
+  display: flex;
+  align-items: baseline;
+  font-weight: 600;
+  font-size: 14px;
+}
+.resume-options-text:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 34px;
+  padding-left: 40px;
+  background-color: #22254b79;
+  margin-left: 0px;
+  color: whitesmoke;
+  transition: all 1s ease-out;
+}
+.resume-options-text a:hover {
+  display: flex;
+  align-items: baseline;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.resume-option-text-selected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 40px;
+  padding-left: 20px;
+  background-color: #22254b;
+  color: whitesmoke;
+}
+.resume-option-text-selected a {
+  display: flex;
+  align-items: baseline;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1110px) {
+  .resume-option-text-selected {
+    width: 180px;
+  }
+  .resume-options-text:hover {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  .resume-options {
+    display: flex;
+
+    width: 94%;
+  }
+  .resume-options-icons {
+    display: flex;
+
+    width: 60px;
+  }
+  .resume-options-icons-icon a {
+    display: flex;
+
+    width: 50px;
+    height: 56px;
+    font-size: 28px;
+  }
+  .resume-options-text {
+    display: flex;
+
+    font-size: 24px;
+    width: 300px;
+  }
+  .resume-options-text:hover {
+    display: flex;
+
+    width: 360px;
+    height: 46px;
+    font-size: 28px;
+  }
+  .resume-option-text-selected {
+    display: flex;
+
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    padding-left: 80px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .resume-options {
+    display: flex;
+    width: 700px;
+  }
+  .resume-options-icons {
+    width: 60px;
+  }
+  .resume-options-icons-icon a {
+    width: 50px;
+    height: 56px;
+    font-size: 28px;
+  }
+  .resume-options-text {
+    font-size: 24px;
+    width: 300px;
+  }
+  .resume-options-text:hover {
+    width: 360px;
+    height: 46px;
+    font-size: 28px;
+  }
+  .resume-option-text-selected {
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    padding-left: 80px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .resume-options {
+    width: 400px;
+    margin-top: 10px;
+  }
+  .resume-options-icons {
+    width: 60px;
+    
+  }
+  .resume-options-icons-icon a {
+    width: 50px;
+    font-size: 27px;
+
+
+  }
+  .resume-options-text {
+    width: 300px;
+    
+  }
+  .resume-options-text:hover {
+    width: 300px;
+    font-size: 26px;
+  }
+  .resume-option-text-selected {
+    width: 320px;
+    font-size: 27px;
+    padding-left: 0px;
+
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .resume-options {
+    width: 360px;
+    margin-top: 10px;
+  }
+  .resume-options-icons {
+    width: 60px;
+  }
+  .resume-options-icons-icon a {
+    width: 50px;
+  }
+  .resume-options-text {
+    width: 300px;
+  }
+  .resume-options-text:hover {
+    width: 250px;
+  }
+  .resume-option-text-selected {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .resume-options {
+    width: 240px;
+  }
+
+  .resume-options-text {
+    font-size: 15px;
+    font-weight: bold;
+    width: 300px;
+  }
+  .resume-options-text:hover {
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px;
+  }
+  .resume-option-text-selected {
+    font-size: 20px;
+    font-weight: bold;
+    width: 180px;
+  }
+}
