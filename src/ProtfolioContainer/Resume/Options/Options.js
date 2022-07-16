@@ -18,7 +18,7 @@ const Options = () => {
   };
 
   //const [selected, setSelected] = React.useState("Education");
-  const [selected, setSelected] = React.useState("Projects");
+  const [selected, setSelected] = React.useState("Education");
 
   React.useEffect(() => {
     console.log(selected);

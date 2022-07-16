@@ -47,3 +47,28 @@
   font-weight: 500;
     color: #fff;
 }
+
+
+@media screen and (max-width: 1110px) {
+
+  .education-container{
+    padding-top: 0px;
+    height: 345px;
+
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .education-container{
+    height: 460px;
+
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  .education-container{
+    height: 750px;
+  }
+}

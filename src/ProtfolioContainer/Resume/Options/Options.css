@@ -98,6 +98,9 @@
 }
 
 @media screen and (max-width: 1110px) {
+  .resume-options {
+    width: 30%;
+  }
   .resume-option-text-selected {
     width: 180px;
   }
@@ -181,20 +184,17 @@
   .resume-options {
     width: 400px;
     margin-top: 10px;
+    height: 38%;
   }
   .resume-options-icons {
     width: 60px;
-    
   }
   .resume-options-icons-icon a {
     width: 50px;
     font-size: 27px;
-
-
   }
   .resume-options-text {
     width: 300px;
-    
   }
   .resume-options-text:hover {
     width: 300px;
@@ -204,7 +204,6 @@
     width: 320px;
     font-size: 27px;
     padding-left: 0px;
-
   }
 }
 
