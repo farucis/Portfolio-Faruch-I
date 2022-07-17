@@ -1,8 +1,8 @@
 import React from "react";
 import './App.css';
-import AboutME from "./ProtfolioContainer/AboutME/AboutME";
-import Home from './ProtfolioContainer/Home/Home';
-import Resume from "./ProtfolioContainer/Resume/Resume";
+import AboutME from "./PortfolioContainer/AboutME/AboutME";
+import Home from './PortfolioContainer/Home/Home';
+import Resume from "./PortfolioContainer/Resume/Resume";
 
 function App() {
   return (
