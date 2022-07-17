@@ -3,7 +3,7 @@ import "./TitleHeader.css";
 
 const TitleHeader = (props) => {
   return (
-    <div className="title-header-container">
+    <div className="title-header-container" id={props.title}>
       <h1>{props.title}</h1>
       <p>{props.subTitle}</p>
 
