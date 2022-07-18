@@ -1,74 +1,67 @@
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding-top: 20px;
-  }
-  
-  .projects-place {
-    padding-inline: 30px;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .projects-name-dot h1 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #0cbfae;
-    margin: 0 0px 0px 20px;
-  }
-  .projects-name-dot {
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-  }
-  .projects-name h2 {
-    margin: 6px 0px 0px 42px;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  
-  .projects-year {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0cbfae;
-    height: 40%;
-    width: 100px;
-    border-radius: 20px;
-    margin-right: 25px;
-  }
-  .projects-year h1 {
-    margin-top: 6px;
-    font-size: 16px;
-    font-weight: 500;
-      color: #fff;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+}
 
-  @media screen and (max-width: 1110px) {
+.projects-place {
+  display: flex;
+  padding-inline: 30px;
+  padding-top: 41px;
+  justify-content: space-between;
+  width: 100%;
+}
+.projects-name-dot h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0cbfae;
+  margin: 0 0px 0px 20px;
+}
+.projects-name-dot {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+.projects-name h2 {
+  margin: 6px 0px 0px 42px;
+  font-size: 15px;
+  font-weight: 500;
+}
 
-    .projects-container{
-      padding-top: 0px;
-      height: 345px;
-  
-    }
+.projects-year {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0cbfae;
+  height: 40%;
+  width: 100px;
+  border-radius: 20px;
+  margin-right: 25px;
+}
+.projects-year h1 {
+  margin-top: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+@media screen and (max-width: 1110px) {
+  .projects-container {
+    padding-top: 0px;
+    height: 345px;
   }
+}
 
-  @media screen and (max-width: 720px) {
-
-    .projects-container{
-      height: 460px;
-  
-    }
+@media screen and (max-width: 720px) {
+  .projects-container {
+    height: 460px;
   }
+}
 
-  @media screen and (max-width: 375px) {
-
-    .projects-container{
-      height: 750px;
-    }
+@media screen and (max-width: 375px) {
+  .projects-container {
+    height: 750px;
   }
+}

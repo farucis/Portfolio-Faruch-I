@@ -10,52 +10,39 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 500%;
+
+}
+.resume-card-option-info-education{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.resume-card-option-info-projects{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.resume-card-option-info-workHistory{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.resume-card-option-info-programmingSkills{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.resume-card-option-info-interests{
+  display: flex;
+  width: 100%;
   height: 100%;
 }
 
-.resume-card-option-info-projects {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-.resume-card-option-info-education {
-  display: flex;
-  width: 100%;
-}
 
 @media screen and (max-width: 1110px) {
   .scroller {
     height: 100%;
+    width: 100%;
   }
-  .resume-card-option-info {
-    width: 700px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .scroller {
-    height: 100%;
-  }
-  .resume-card-option-info {
-    width: 480px;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .scroller {
-    height: 100%;
-  }
-  .resume-card-option-info {
-    width: 400px;
-  }
-  
-}
-@media screen and (max-width: 375px) {
-  .scroller {
-    height: 100%;
-  }
-  .resume-card-option-info {
-    width: 280px;
-  }
-  
 }

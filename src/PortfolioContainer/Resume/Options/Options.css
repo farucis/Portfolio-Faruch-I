@@ -101,8 +101,13 @@
   .resume-options {
     width: 30%;
   }
+  .resume-options-text {
+    font-size: 18px;
+  }
   .resume-option-text-selected {
     width: 180px;
+    font-size: 18px;
+
   }
   .resume-options-text:hover {
     width: 160px;
@@ -112,37 +117,31 @@
 @media screen and (max-width: 910px) {
   .resume-options {
     display: flex;
-
     width: 94%;
   }
   .resume-options-icons {
     display: flex;
-
     width: 60px;
   }
   .resume-options-icons-icon a {
     display: flex;
-
     width: 50px;
     height: 56px;
     font-size: 28px;
   }
   .resume-options-text {
     display: flex;
-
     font-size: 24px;
     width: 300px;
   }
   .resume-options-text:hover {
     display: flex;
-
     width: 360px;
     height: 46px;
     font-size: 28px;
   }
   .resume-option-text-selected {
     display: flex;
-
     width: 400px;
     height: 50px;
     font-size: 30px;
@@ -153,7 +152,7 @@
 @media screen and (max-width: 810px) {
   .resume-options {
     display: flex;
-    width: 700px;
+    width: 94%;
   }
   .resume-options-icons {
     width: 60px;
@@ -165,45 +164,20 @@
   }
   .resume-options-text {
     font-size: 24px;
-    width: 300px;
+    width: 230px;
   }
   .resume-options-text:hover {
-    width: 360px;
+    display: flex;
+    width: 200%;
     height: 46px;
     font-size: 28px;
   }
   .resume-option-text-selected {
-    width: 400px;
+    display: flex;
+    width: 150%;
     height: 50px;
     font-size: 30px;
     padding-left: 80px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .resume-options {
-    width: 400px;
-    margin-top: 10px;
-    height: 38%;
-  }
-  .resume-options-icons {
-    width: 60px;
-  }
-  .resume-options-icons-icon a {
-    width: 50px;
-    font-size: 27px;
-  }
-  .resume-options-text {
-    width: 300px;
-  }
-  .resume-options-text:hover {
-    width: 300px;
-    font-size: 26px;
-  }
-  .resume-option-text-selected {
-    width: 320px;
-    font-size: 27px;
-    padding-left: 0px;
   }
 }
 
@@ -220,18 +194,20 @@
   }
   .resume-options-text {
     width: 300px;
+    font-size: 22px;
   }
   .resume-options-text:hover {
     width: 250px;
   }
   .resume-option-text-selected {
     width: 280px;
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .resume-options {
-    width: 240px;
+    width: 90%;
   }
 
   .resume-options-text {

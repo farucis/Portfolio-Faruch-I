@@ -13,9 +13,19 @@ const Info = () => {
         <section className="resume-card-option-info-education" id="education">
           <Education />
         </section>
+        <section className="resume-card-option-info-workHistory" id="workHistory">
+          <WorkHistory />
+        </section>
+        <section className="resume-card-option-info-programmingSkills" id="programmingSkills">
+          <Skills />
+        </section>
         <section className="resume-card-option-info-projects" id="projects">
           <Projects />
         </section>
+        <section className="resume-card-option-info-interests" id="interests">
+          <Interests />
+        </section>
+
         {/*  
       <WorkHistory />
       <Skills />

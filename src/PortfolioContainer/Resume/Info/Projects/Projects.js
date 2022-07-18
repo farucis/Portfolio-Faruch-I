@@ -4,35 +4,37 @@ import "./Projects.css";
 const Projects = () => {
   return (
     <div className="projects-container">
-      <div className="projects-place">
-        <div className="projects-name">
-          <div className="projects-name-dot">
-            🔴
-            <h1>Personal Portfolio Website</h1>
-          </div>
-          <h2>Technologies Used: React JS, Bootsrap</h2>
-          <h2>
-            A Personal Portfolio website to showcase all my details and projects
-            at one place.
-          </h2>
+      <Project
+        name="mobile Shapeit"
+        technologies="React Native, Firebase, Node Js, Redux, RESTAPI, Python"
+        info="A calculated nutrition app designed to help track daily nutrition
+            with AI integration for food prediction from photography"
+        year="2022"
+      />
+      <Project
+        name="mobile Shapeit"
+        technologies="React Native, Firebase, Node Js, Redux, RESTAPI, Python"
+        info="A calculated nutrition app designed to help track daily nutrition
+            with AI integration for food prediction from photography"
+        year="2022"
+      />
+    </div>
+  );
+};
+
+const Project = (props) => {
+  return (
+    <div className="projects-place">
+      <div className="projects-name">
+        <div className="projects-name-dot">
+          🔴
+          <h1>{props.name}</h1>
         </div>
-        <div className="projects-year">
-          <h1>2022</h1>
-        </div>
+        <h2>Technologies Used: {props.technologies}</h2>
+        <h2>{props.info}</h2>
       </div>
-      <div className="projects-place">
-        <div className="projects-name">
-          <div className="projects-name-dot">
-            🔴
-            <h1>mobile Shapeit</h1>
-          </div>
-          <h2>Technologies Used: React Native, Firebase, Node Js, Redux, RESTAPI</h2>
-          <h2>A calculated nutrition app designed to help track daily nutrition
-             with AI integration for food prediction from photography</h2>
-        </div>
-        <div className="projects-year">
-          <h1>2021</h1>
-        </div>
+      <div className="projects-year">
+        <h1>{props.year}</h1>
       </div>
     </div>
   );
