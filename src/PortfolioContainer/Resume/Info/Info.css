@@ -11,38 +11,46 @@
   flex-direction: column;
   width: 100%;
   height: 500%;
-
 }
-.resume-card-option-info-education{
+.resume-card-option-info-education {
   display: flex;
   width: 100%;
   height: 100%;
 }
-.resume-card-option-info-projects{
+.resume-card-option-info-projects {
   display: flex;
   width: 100%;
   height: 100%;
 }
-.resume-card-option-info-workHistory{
+.resume-card-option-info-workHistory {
   display: flex;
   width: 100%;
   height: 100%;
 }
-.resume-card-option-info-programmingSkills{
+.resume-card-option-info-programmingSkills {
   display: flex;
   width: 100%;
   height: 100%;
 }
-.resume-card-option-info-interests{
+.resume-card-option-info-interests {
   display: flex;
   width: 100%;
   height: 100%;
 }
-
 
 @media screen and (max-width: 1110px) {
   .scroller {
     height: 100%;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .resume-card-option-info {
+
+    height: 700%;
+  }
+  .resume-card-option-info-projects {
+    height: 200%;
   }
 }

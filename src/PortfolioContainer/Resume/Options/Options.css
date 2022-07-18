@@ -184,6 +184,7 @@
 @media screen and (max-width: 420px) {
   .resume-options {
     width: 360px;
+    height: 36%;
     margin-top: 10px;
   }
   .resume-options-icons {
@@ -208,6 +209,7 @@
 @media screen and (max-width: 375px) {
   .resume-options {
     width: 90%;
+    height: 33%;
   }
 
   .resume-options-text {

@@ -28,7 +28,7 @@
   color: #09bead;
 }
 .skill-bar {
-  margin-top: 3px;
+  margin-top: -4px;
   display: flex;
   width: 90%;
   height: 20px;

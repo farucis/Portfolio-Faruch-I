@@ -1,0 +1,31 @@
+.interests-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.interest {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.interest-name-title {
+  display: flex;
+  padding-left: 20px;
+  align-items: center;
+}
+.interest-name-title h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: #09bead;
+
+}
+.interest p {
+  font-size: 1rem;
+  padding-left: 70px;
+
+}
