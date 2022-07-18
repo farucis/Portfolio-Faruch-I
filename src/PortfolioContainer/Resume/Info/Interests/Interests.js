@@ -8,8 +8,7 @@ const InterestsList = [
   },
   {
     name: "Music",
-    info: "I like to listen to a variety of types of music, but mostly soothing music.\
-        Listening to soothing music is something I can never compromise with.",
+    info: "I like to listen to a variety of types of music, but mostly soothing music. Listening to soothing music is something I can never compromise with.",
   },
   {
     name: "Video Games",

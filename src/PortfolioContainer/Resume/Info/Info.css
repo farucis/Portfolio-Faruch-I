@@ -1,8 +1,7 @@
 .scroller {
   height: 360px;
-  overflow-y: scroll;
+  overflow-y: hidden;
   scroll-snap-type: y mandatory;
-  align-self: center;
 }
 
 .resume-card-option-info {

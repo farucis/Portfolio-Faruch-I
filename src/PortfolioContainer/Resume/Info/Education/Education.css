@@ -55,6 +55,10 @@
     height: 345px;
 
   }
+  .education-year{
+
+    margin-right: 0px;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -63,6 +67,7 @@
     height: 460px;
 
   }
+
 }
 
 @media screen and (max-width: 375px) {
