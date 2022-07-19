@@ -19,7 +19,7 @@
   background-color: #22254b;
   padding: 30px 0 30px 0;
 }
-.resume-options-icons-icon a {
+.resume-options-icons-icon span {
   display: flex;
   align-items: center;
   font-size: larger;
@@ -28,7 +28,7 @@
   justify-content: center;
   color: whitesmoke;
 }
-.resume-options-icons-icon a:hover {
+.resume-options-icons-icon span:hover {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,14 +48,14 @@
   width: 160px;
   height: 34px;
   margin-left: 30px;
-  color: #22254b;
   transition: all 0.3s ease-in-out;
 }
-.resume-options-text a {
+.resume-options-text span {
   display: flex;
   align-items: baseline;
   font-weight: 600;
   font-size: 14px;
+  color: #22254b;
 }
 .resume-options-text:hover {
   display: flex;
@@ -71,7 +71,7 @@
   color: whitesmoke;
   transition: all 1s ease-out;
 }
-.resume-options-text a:hover {
+.resume-options-text span:hover {
   display: flex;
   align-items: baseline;
   font-weight: 500;
@@ -88,13 +88,14 @@
   height: 40px;
   padding-left: 20px;
   background-color: #22254b;
-  color: whitesmoke;
 }
-.resume-option-text-selected a {
+.resume-option-text-selected span {
   display: flex;
   align-items: baseline;
   font-weight: 600;
   font-size: 18px;
+  color: whitesmoke;
+
 }
 
 @media screen and (max-width: 1110px) {
@@ -123,7 +124,7 @@
     display: flex;
     width: 60px;
   }
-  .resume-options-icons-icon a {
+  .resume-options-icons-icon span {
     display: flex;
     width: 50px;
     height: 56px;
@@ -157,7 +158,7 @@
   .resume-options-icons {
     width: 60px;
   }
-  .resume-options-icons-icon a {
+  .resume-options-icons-icon span {
     width: 50px;
     height: 56px;
     font-size: 28px;
@@ -190,7 +191,7 @@
   .resume-options-icons {
     width: 60px;
   }
-  .resume-options-icons-icon a {
+  .resume-options-icons-icon span {
     width: 50px;
   }
   .resume-options-text {

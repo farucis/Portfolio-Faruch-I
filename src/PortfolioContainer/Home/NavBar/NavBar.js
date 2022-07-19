@@ -8,6 +8,17 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [isActive, setIsActive] = React.useState("");
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    const element = document.querySelector(target);
+    const location = element.offsetTop;
+
+    window.scrollTo({
+      top: location,
+    });
+  };
+
   React.useEffect(() => {
     function handleWindowResize() {
       setWindowWidth(window.innerWidth);
@@ -38,6 +49,7 @@ const NavBar = () => {
                     <NavBarListMobileOptions
                       setIsOpen={setIsOpen}
                       barList={barList}
+                      handleClick={handleClick}
                     />
                   </div>
                 </div>
@@ -46,6 +58,7 @@ const NavBar = () => {
                   <NavBarListMobileOptions
                     setIsOpen={setIsOpen}
                     barList={barList}
+                    handleClick={handleClick}
                   />
                 </div>
               )}
@@ -58,20 +71,14 @@ const NavBar = () => {
                 <div key={index}>
                   {isActive === bar ? (
                     <div className="navBar-list-active">
-                      {bar === "AboutMe" ? (
-                        <a href="#About Me">{bar}</a>
-                      ) : (
-                        <a href={`#${bar}`}>{bar}</a>
-                      )}
+                      <a href={`#${bar}`}>{bar}</a>
                     </div>
-                  ) : bar === "AboutMe" ? (
-                    <a href="#About Me" onClick={() => setIsActive(bar)}>
-                      {bar}
-                    </a>
                   ) : (
-                    <a href={`#${bar}`} onClick={() => setIsActive(bar)}>
-                      {bar}
-                    </a>
+                    <div onClick={() => setIsActive(bar)}>
+                      <a href={`#${bar}`} onClick={handleClick}>
+                        {bar}
+                      </a>
+                    </div>
                   )}
                 </div>
               );
@@ -89,15 +96,9 @@ const NavBarListMobileOptions = (props) => {
       {props.barList.map((bar, index) => {
         return (
           <div key={index}>
-            {bar === "AboutMe" ? (
-              <div onClick={() => props.setIsOpen(false)}>
-                <a href="#About Me">{bar}</a>
-              </div>
-            ) : (
-              <div onClick={() => props.setIsOpen(false)}>
-                <a href={`#${bar}`}>{bar}</a>
-              </div>
-            )}
+            <div onClick={() => props.setIsOpen(false)}>
+              <a href={`#${bar}`} onClick={props.handleClick}>{bar}</a>
+            </div>
           </div>
         );
       })}

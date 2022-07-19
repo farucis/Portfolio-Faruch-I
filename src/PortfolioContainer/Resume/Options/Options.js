@@ -1,5 +1,6 @@
 import React from "react";
 import "./Options.css";
+import ScrollIntoView from "react-scroll-into-view";
 
 import { links } from "../Links";
 import { FaUserGraduate } from "react-icons/fa";
@@ -17,12 +18,9 @@ const Options = () => {
     if (e === "FaPalette") return <FaPalette />;
   };
 
-  //const [selected, setSelected] = React.useState("Education");
   const [selected, setSelected] = React.useState("Education");
 
-  React.useEffect(() => {
-    console.log(selected);
-  }, [selected]);
+  React.useEffect(() => {}, [selected]);
 
   return (
     <div className="resume-options">
@@ -32,24 +30,29 @@ const Options = () => {
             {link.text === selected ? (
               <>
                 <div className="resume-options-icons-icon">
-                  <a href={link.url}>{findIcon(link.icon)}</a>
+                  <span key={link.id + 20}>{findIcon(link.icon)}</span>
                 </div>
-                <a href={link.url} key={link.id}>
-                  <div className="resume-option-text-selected">{link.text}</div>
-                </a>
+                <div className="resume-option-text-selected">
+                  <span key={link.id + 20}>{link.text}</span>
+                </div>
               </>
             ) : (
-              <>
-                <div
-                  className="resume-options-icons-icon"
-                  onClick={() => setSelected(link.text)}
-                >
-                  <a href={link.url} onClick={()=> setSelected(link.text)} >{findIcon(link.icon)}</a>
-                </div >
-                <a href={link.url} key={link.id} onClick={()=> setSelected(link.text)} >
-                  <div className="resume-options-text">{link.text}</div>
-                </a>
-              </>
+              <ScrollIntoView selector={link.url} smooth={true} scrollOptions={{block:"nearest"}}>
+                <div className="resume-options-2">
+                  <div
+                    className="resume-options-icons-icon"
+                    onClick={() => setSelected(link.text)}
+                  >
+                    <span key={link.id}>{findIcon(link.icon)}</span>
+                  </div>
+                  <div
+                    className="resume-options-text"
+                    onClick={() => setSelected(link.text)}
+                  >
+                    <span key={link.id}>{link.text}</span>
+                  </div>
+                </div>
+              </ScrollIntoView>
             )}
           </div>
         ))}

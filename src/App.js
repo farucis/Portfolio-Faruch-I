@@ -2,9 +2,10 @@ import React from "react";
 import "./App.css";
 
 import AboutME from "./PortfolioContainer/AboutME/AboutME";
-import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 import Home from "./PortfolioContainer/Home/Home";
+import Projects from "./PortfolioContainer/Projects/Projects";
 import Resume from "./PortfolioContainer/Resume/Resume";
+import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <AboutME />
       <Resume />
+      <Projects />
       <ContactMe />
     </div>
   );

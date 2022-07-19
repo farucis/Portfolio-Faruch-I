@@ -6,7 +6,7 @@ import NavBar from './NavBar/NavBar';
 
 const Home = () => {
     return (
-        <div className='home-container' >
+        <div className='home-container' id={'Home'} >
             <NavBar />
             <Profile />
             <Footer />
