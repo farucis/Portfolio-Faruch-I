@@ -8,7 +8,7 @@ import Interests from "./Interests/Interests";
 
 const Info = () => {
   return (
-    <article className="scroller">
+    <div className="scroller">
       <div className="resume-card-option-info" id="info">
         <section className="resume-card-option-info-education" id="education" key={'1'}>
           <Education />
@@ -26,7 +26,7 @@ const Info = () => {
           <Interests />
         </section>
       </div>
-    </article>
+    </div>
   );
 };
 
