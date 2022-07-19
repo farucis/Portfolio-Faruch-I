@@ -37,7 +37,7 @@ const Options = () => {
                 </div>
               </>
             ) : (
-              <ScrollIntoView selector={link.url} smooth={true} scrollOptions={{block:"nearest"}}>
+              <ScrollIntoView selector={link.url} smooth={true} scrollOptions={{block:"nearest"}} className='view-scroller'>
                 <div className="resume-options-2">
                   <div
                     className="resume-options-icons-icon"
