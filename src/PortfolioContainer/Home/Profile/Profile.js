@@ -42,7 +42,7 @@ const Profile = () => {
                     1000,
                     "Data Scientist 🛰",
                     1000,
-                    "React/React Native Dev 📱",
+                    "React/React Native 📱",
                     1000,
                     "ASP.NET Dev 🌐",
                     1000,
