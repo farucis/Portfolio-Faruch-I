@@ -16,6 +16,7 @@ const Education = () => {
         year="2009-2013"
         specializing="Electrical"
       />
+      
     </div>
   );
 };
@@ -25,11 +26,12 @@ const OneEducation = (props) => {
     <div className="education-place">
       <div className="education-name">
         <div className="education-name-dot">
-          🔴
-          <h1>{props.name}</h1>
+          <li>{props.name}</li>
         </div>
-        <h2>{props.level}</h2>
-        <h2>Specializing in {props.specializing}</h2>
+        <div className="education-name-level">
+          <h2>{props.level}</h2>
+          <h2>Specializing in {props.specializing}</h2>
+        </div>
       </div>
       <div className="education-year">
         <h1>{props.year}</h1>

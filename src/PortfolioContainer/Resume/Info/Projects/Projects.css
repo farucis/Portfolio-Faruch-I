@@ -12,7 +12,7 @@
   justify-content: space-between;
   width: 100%;
 }
-.projects-name-dot h1 {
+.projects-name-dot li {
   font-size: 18px;
   font-weight: bold;
   color: #0cbfae;
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   background-color: #0cbfae;
-  height: 40%;
+  height: 40px;
   width: 100px;
   border-radius: 20px;
   margin-right: 25px;
@@ -45,22 +45,46 @@
   font-weight: 500;
   color: #fff;
 }
+.projects-name-technologies {
+  margin-top: 20px;
+  background-color: #0cbfae;
+}
 
 @media screen and (max-width: 1110px) {
   .projects-container {
     padding-top: 0px;
-    height: 345px;
   }
 }
 
 @media screen and (max-width: 720px) {
-  .projects-container {
-    height: 460px;
+  .projects-place {
+    padding: 30px 0px 0px 4px;
+  }
+  .projects-name-dot li {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0cbfae;
+    margin: 0 0px 0px 5px;
+  }
+  .projects-name h2 {
+    margin: 6px 0px 0px 10px;
+    font-size: 13px;
+  }
+
+  .projects-year {
+    height: 28px;
+    width: 100px;
+    margin-right: 3px;
+  }
+  .projects-year h1 {
+    margin-top: 6px;
+    font-size: 13px;
+  }
+  .projects-name-technologies {
+    margin-top: 10px;
+    margin-left: 6px;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .projects-container {
-    height: 750px;
-  }
 }

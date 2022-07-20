@@ -33,8 +33,7 @@ const Interest = (props) => {
   return (
     <div className="interest" key={props.index}>
       <div className="interest-name-title">
-        <div>🔴</div>
-        <h3>{props.name}</h3>
+        <li>{props.name}</li>
       </div>
 
       <p>{props.info}</p>

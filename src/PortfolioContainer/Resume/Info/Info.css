@@ -1,7 +1,9 @@
 .scroller {
   height: 360px;
   overflow-y: hidden;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
+
 }
 
 .resume-card-option-info {

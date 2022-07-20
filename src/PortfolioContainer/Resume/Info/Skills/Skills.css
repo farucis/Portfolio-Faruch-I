@@ -43,3 +43,19 @@
   border-bottom-left-radius: 7px;
   background-color: #22254b;
 }
+
+@media screen and (max-width: 720px) {
+  .skill-container {
+    width: 90%;
+
+  }
+  .skills-container-s {
+    justify-content: start;
+    align-items: flex-start;
+    padding: 10px 0px 0px 10px;
+  }
+  .skill-container li {
+    background-color: black;
+    font-size: 1rem;
+  }
+}

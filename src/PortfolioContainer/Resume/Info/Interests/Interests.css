@@ -13,10 +13,9 @@
 }
 .interest-name-title {
   display: flex;
-  padding-left: 20px;
   align-items: center;
 }
-.interest-name-title h3 {
+.interest-name-title li {
   font-size: 1.3rem;
   font-weight: bold;
   padding-left: 20px;
@@ -29,3 +28,22 @@
   padding-left: 70px;
 
 }
+
+@media screen and (max-width: 720px) {
+  .interest-name-title {
+    padding-left: 0px;
+  }
+  .interest-name-title {
+    padding-left: 0px;
+  }
+  .interest-name-title h3 {
+    font-size: 1.2rem;
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+  .interest p {
+    font-size: 0.9rem;
+    padding-left: 20px;
+  }
+}
+  

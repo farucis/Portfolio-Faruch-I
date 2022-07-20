@@ -8,11 +8,11 @@
   height: 100%;
   background-color: #eee;
 }
+
 .resum-card {
   display: flex;
   height: 360px;
   width: 1000px;
-
   background-color: #ccc;
 }
 

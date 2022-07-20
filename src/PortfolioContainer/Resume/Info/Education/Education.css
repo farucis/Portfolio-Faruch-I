@@ -13,7 +13,8 @@
   justify-content: space-between;
   width: 100%;
 }
-.education-name-dot h1 {
+.education-name-dot h1,
+li {
   font-size: 18px;
   font-weight: bold;
   color: #0cbfae;
@@ -44,35 +45,38 @@
   margin-top: 6px;
   font-size: 16px;
   font-weight: 500;
-    color: #fff;
-}
-
-
-@media screen and (max-width: 1110px) {
-
-  .education-container{
-    padding-top: 0px;
-    height: 345px;
-
-  }
-  .education-year{
-
-    margin-right: 0px;
-  }
+  color: #fff;
 }
 
 @media screen and (max-width: 720px) {
-
-  .education-container{
-    height: 460px;
-
+  .education-place {
+    padding: 50px 10px;
   }
-
+  .education-name-dot h1,
+  li {
+    font-size: 14px;
+    margin: 0px;
+  }
+  .education-name-level {
+    margin-top: 10px;
+    margin-left: 6px;
+  }
+  .education-name h2 {
+    font-size: 13px;
+    margin: 0px;
+  }
+  .education-year {
+    width: 90px;
+    height: 23px;
+    margin-right: 0px;
+  }
+  .education-year h1 {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 375px) {
-
-  .education-container{
-    height: 750px;
+  .education-year h1 {
+    font-size: 12px;
   }
 }
