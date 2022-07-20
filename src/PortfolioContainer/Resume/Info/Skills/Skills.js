@@ -71,7 +71,7 @@ const Skill = (props) => {
   };
   return (
     <div className="skill-container" key={props.index}>
-      <h1>{props.name}</h1>
+      <li>{props.name}</li>
       {setFill(props.fill)}
       <div className="skill-bar">
         <div style={{ width: `${props.fill}%` }} className="skill-bar-fill" />

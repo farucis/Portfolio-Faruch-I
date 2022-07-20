@@ -20,7 +20,7 @@ export const links = [
     {
         id: 4,
         text: 'Projects',
-        url: '#projects',
+        url: '#reprojects',
         icon: 'GoGraph'
     },
     {
