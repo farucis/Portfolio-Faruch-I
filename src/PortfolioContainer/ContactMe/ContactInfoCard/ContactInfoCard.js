@@ -20,8 +20,16 @@ const ContactInfoCard = () => {
           </div>
         </div>
       </div>
-      <h2>Send Your Email Here!</h2>
-      <div className="contact-info-image" />
+      <div className="contact-info-email">
+        <div className="contact-info-email-parent">
+          <h2>Send Your Email Here!</h2>
+          <img
+            className="contact-info-image"
+            src={require("../../../assets/mailz.jpeg").default}
+            alt="reloud page"
+          />
+        </div>
+      </div>
     </div>
   );
 };

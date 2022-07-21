@@ -20,14 +20,14 @@
   color: azure;
   font-size: 40px;
   font-family: "Roboto Slab", serif;
-  font-weight: 500;
+  font-weight: 900;
   opacity: 0.94;
 }
 .contact-info-container h2 {
   color: var(--toast-shadow);
   font-size: 20px;
   font-family: "Roboto Slab", serif;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 74px;
   padding-left: 4px;
   opacity: 0.9;
@@ -47,15 +47,47 @@
 }
 
 .contact-info-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border-radius: 8px;
   width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-image: url("../../../assets/mailz.jpeg");
-  margin-bottom: 70px;
   opacity: 0.8;
+}
+
+@media screen and (max-width: 940px) {
+  .contact-container {
+    flex-direction: column;
+    width: 99%;
+    height: 100%;
+    padding: 0 !important;
+  }
+  .contact-info-email {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    align-self: center;
+    align-items: center;
+  }
+  .contact-info-image {
+    width: 390px;
+    align-items: center;
+    margin: 0 !important;
+  }
+  .contact-info-container h2 {
+    padding: 0 !important;
+    font-size: 18px;
+    margin-left: 4px;
+  }
+  .contact-info-container h1 {
+    color: azure;
+    font-size: 34px;
+    margin-top: -22px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact-info-image {
+    width: 240px;
+    margin: 0 !important;
+  }
 }

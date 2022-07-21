@@ -1,7 +1,14 @@
+.contact-input-container{
+  display: flex;
+  height: 100%;
+  width: 110%;
+  align-items: center;
+  justify-content: center;
+}
 .contact-input {
   display: flex;
   height: 80%;
-  width: 80%;
+  width: 100%;
   flex-direction: column;
   border-radius: 20px;
   justify-content: center;
@@ -44,4 +51,26 @@
 }
 .contact-input .primary-btn {
   margin: 40px 0px 18px 26px;
+}
+
+@media screen and (max-width: 940px) {
+  .contact-input {
+    align-self: center;
+    width: 400px;
+    margin: -30px 0 0 0;
+    border-radius: 16px;
+
+  }
+  .contact-input-container{
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact-input {
+    width: 250px;
+
+
+  }
 }

@@ -9,8 +9,25 @@
 .contact-container {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 1120px;
   height: 100%;
   border-radius: 20px;
   background-color: #27232f;
+}
+
+@media screen and (max-width: 1110px) {
+  .contact-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .contact-container {
+    flex-direction: column;
+    width: 99%;
+    height: 100%;
+    padding-bottom: 10px;
+  }
 }
