@@ -1,3 +1,5 @@
+/* Resume: css */
+
 .resume-container {
   display: flex;
   flex-direction: column;
@@ -5,62 +7,26 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-
 }
+
 .resume-card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   height: 360px;
-
+  width: 1000px;
 }
 
+/* Options mobile: css */
 
 @media screen and (max-width: 1110px) {
   .resume-card {
-    width: 910px;
-
+    width: 880px;
   }
 }
-@media screen and (max-width: 910px) {
-  .resume-container {
-    display: flex;
 
-  }
+@media screen and (max-width: 1020px) {
   .resume-card {
-    display: flex;
-    width: 100%;
-    height:730px;
+    width: 90%;
+    height: 100%;
     flex-direction: column;
-    margin-top: 20px;
-
-
   }
 }
-@media screen and (max-width: 810px) {
-  .resume-card {
-    width: 100%;
-    height:740px;
-
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .resume-card {
-    height:820px;
-
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .resume-card {
-    height:860px;
-
-  }
-}
-
-
-
-
-

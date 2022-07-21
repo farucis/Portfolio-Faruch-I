@@ -3,7 +3,7 @@ import "./App.css";
 
 import AboutME from "./PortfolioContainer/AboutME/AboutME";
 import Home from "./PortfolioContainer/Home/Home";
-import Project from "./PortfolioContainer/Projects/Projects";
+import Projects from "./PortfolioContainer/Projects/Projects";
 import Resume from "./PortfolioContainer/Resume/Resume";
 import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
 
@@ -12,7 +12,8 @@ function App() {
     <div className="App">
       <Home />
       <AboutME />
-      <Project />
+      <Resume />
+      <Projects />
       <ContactMe />
     </div>
   );

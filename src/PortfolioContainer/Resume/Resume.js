@@ -7,14 +7,11 @@ import Info from "./Info/Info";
 
 const Resume = () => {
   return (
-    <div>
-      <TitleHeader title="Resume" subTitle="My Foraml Bio Details" />
-
-      <div className="resume-container">
-        <div className="resume-card">
-          <Options />
-          <Info />
-        </div>
+    <div className="resume-container">
+      {<TitleHeader title="Resume" subTitle="My Foraml Bio Details" />}
+      <div className="resume-card">
+        <Options />
+        <Info />
       </div>
     </div>
   );

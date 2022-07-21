@@ -1,234 +1,101 @@
-.resume-options {
+/* Options: css */
+.resum-options-container {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 48%;
   height: 100%;
-  justify-content: space-between;
+}
+.resum-options {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
   box-shadow: 4px 2px 5px -2px rgba(0, 0, 0, 0.582);
-  z-index: 20;
-}
-.view-scroller{
-  position: absolute;
-}
-.resume-options-icons {
-  display: flex;
-  align-self: baseline;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  width: 36px;
-  height: 100%;
-  background-color: #22254b;
-  padding: 30px 0 30px 0;
-}
-.resume-options-icons-icon span {
-  display: flex;
-  align-items: center;
-  font-size: larger;
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-  color: whitesmoke;
-}
-.resume-options-icons-icon span:hover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease-out;
-  width: 40px;
-}
-.resume-options-2 {
-  flex-direction: row;
-  align-items: center;
-  display: flex;
-  align-self: baseline;
-  margin-left: 2px;
-}
-.resume-options-text {
-  display: flex;
-  align-items: center;
-  width: 160px;
-  height: 34px;
-  margin-left: 30px;
-  transition: all 0.3s ease-in-out;
-}
-.resume-options-text span {
-  display: flex;
-  align-items: baseline;
-  font-weight: 600;
-  font-size: 14px;
-  color: #22254b;
-}
-.resume-options-text:hover {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 210px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 34px;
-  padding-left: 40px;
-  background-color: #22254b79;
-  margin-left: 0px;
-  color: whitesmoke;
-  transition: all 1s ease-out;
-}
-.resume-options-text span:hover {
-  display: flex;
-  align-items: baseline;
-  font-weight: 500;
-  font-size: 15px;
 }
 
-.resume-option-text-selected {
+/* Options Icons: css */
+
+.resum-optios-icons-colz {
   display: flex;
+  width: 38px;
+  height: 100%;
   align-items: center;
-  justify-content: center;
-  width: 230px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 40px;
-  padding-left: 20px;
   background-color: #22254b;
 }
-.resume-option-text-selected span {
+.resum-optios-icons {
   display: flex;
-  align-items: baseline;
-  font-weight: 600;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+.resum-optios-icons div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 85%;
   font-size: 18px;
   color: whitesmoke;
-
+}
+.resum-optios-icons div:hover {
+  transition: all 0.3s ease-out;
+  transform: scale(1.4);
 }
 
-@media screen and (max-width: 1110px) {
-  .resume-options {
-    width: 30%;
-  }
-  .resume-options-text {
-    font-size: 18px;
-  }
-  .resume-option-text-selected {
-    width: 180px;
-    font-size: 18px;
+/* Options Names: css */
 
-  }
-  .resume-options-text:hover {
-    width: 160px;
-  }
+.resum-optios-names-colz {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.resum-optios-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 90%;
+}
+.resum-optios-names div {
+  display: inline-block;
+  height: 40px;
+  width: 85%;
+  border: white;
+  transition: all 1s ease-out;
+  transform: scale(1);
 }
 
-@media screen and (max-width: 910px) {
-  .resume-options {
-    display: flex;
-    width: 94%;
-  }
-  .resume-options-icons {
-    display: flex;
-    width: 60px;
-  }
-  .resume-options-icons-icon span {
-    display: flex;
-    width: 50px;
-    height: 56px;
-    font-size: 28px;
-  }
-  .resume-options-text {
-    display: flex;
-    font-size: 24px;
-    width: 300px;
-  }
-  .resume-options-text:hover {
-    display: flex;
-    width: 360px;
-    height: 46px;
-    font-size: 28px;
-  }
-  .resume-option-text-selected {
-    display: flex;
-    width: 400px;
-    height: 50px;
-    font-size: 30px;
-    padding-left: 80px;
-  }
+.resum-optios-names-select div {
+  display: flex;
+  height: 40px;
+  width: 85%;
+  border-radius: 20px 3px 50px 4px;
+  border: none;
+  background-color: #22254b;
+}
+.resum-optios-names h1 {
+  display: flex;
+  font-size: 15px;
+  margin-top: 8px;
+  padding-left: 20px;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px 3px 50px 4px;
+  font-weight: 600;
+  color: #22254b;
+}
+.resum-optios-names div:hover {
+  transition: all 1s ease-in-out;
+  transform: scale(0.8);
+  background-color: #22254b79;
+  color: whitesmoke;
+  border: none;
+  border-radius: 20px 3px 50px 4px;
 }
 
-@media screen and (max-width: 810px) {
-  .resume-options {
-    display: flex;
-    width: 94%;
-  }
-  .resume-options-icons {
-    width: 60px;
-  }
-  .resume-options-icons-icon span {
-    width: 50px;
-    height: 56px;
-    font-size: 28px;
-  }
-  .resume-options-text {
-    font-size: 24px;
-    width: 230px;
-  }
-  .resume-options-text:hover {
-    display: flex;
-    width: 200%;
-    height: 46px;
-    font-size: 28px;
-  }
-  .resume-option-text-selected {
-    display: flex;
-    width: 150%;
-    height: 50px;
-    font-size: 30px;
-    padding-left: 80px;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .resume-options {
-    width: 360px;
-    height: 36%;
-    margin-top: 10px;
-  }
-  .resume-options-icons {
-    width: 60px;
-  }
-  .resume-options-icons-icon span {
-    width: 50px;
-  }
-  .resume-options-text {
-    width: 300px;
-    font-size: 22px;
-  }
-  .resume-options-text:hover {
-    width: 250px;
-  }
-  .resume-option-text-selected {
-    width: 280px;
-    font-size: 20px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .resume-options {
-    width: 90%;
-    height: 33%;
-  }
-
-  .resume-options-text {
-    font-size: 15px;
-    font-weight: bold;
-    width: 300px;
-  }
-  .resume-options-text:hover {
-    font-size: 18px;
-    font-weight: bold;
-    width: 150px;
-  }
-  .resume-option-text-selected {
-    font-size: 20px;
-    font-weight: bold;
-    width: 180px;
+@media screen and (max-width: 1020px) {
+  .resum-options {
+    width: 100%;
+    height: 290px;
   }
 }

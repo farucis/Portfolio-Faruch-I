@@ -23,40 +23,30 @@ const Options = () => {
   React.useEffect(() => {}, [selected]);
 
   return (
-    <div className="resume-options">
-      <div className="resume-options-icons">
-        {links.map((link, index) => (
-          <div className="resume-options-2">
-            {link.text === selected ? (
-              <>
-                <div className="resume-options-icons-icon">
-                  <span key={link.id + 20}>{findIcon(link.icon)}</span>
-                </div>
-                <div className="resume-option-text-selected">
-                  <span key={link.id + 20}>{link.text}</span>
-                </div>
-              </>
-            ) : (
-              <ScrollIntoView selector={link.url} smooth={true} scrollOptions={{block:"nearest"}} className='view-scroller'>
-                <div className="resume-options-2">
-                  <div
-                    className="resume-options-icons-icon"
-                    onClick={() => setSelected(link.text)}
-                  >
-                    <span key={link.id}>{findIcon(link.icon)}</span>
-                  </div>
-                  <div
-                    className="resume-options-text"
-                    onClick={() => setSelected(link.text)}
-                  >
-                    <span key={link.id}>{link.text}</span>
-                  </div>
-                </div>
-              </ScrollIntoView>
-            )}
+    <div className="resum-options">
+      {links.map((link, index) => (
+        <ScrollIntoView
+          selector={link.url}
+          smooth={true}
+          scrollOptions={{ block: "nearest" }}
+          className="resum-options-container"
+        >
+          <div className="resum-optios-icons-colz">
+            <div className="resum-optios-icons">
+              <div onClick={() => setSelected(link.text)}>
+                {findIcon(link.icon)}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+          <div className="resum-optios-names-colz">
+            <div className="resum-optios-names">
+              <div onClick={() => setSelected(link.text)}>
+                <h1>{link.text}</h1>
+              </div>
+            </div>
+          </div>
+        </ScrollIntoView>
+      ))}
     </div>
   );
 };

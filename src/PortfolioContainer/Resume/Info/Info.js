@@ -8,23 +8,23 @@ import Interests from "./Interests/Interests";
 
 const Info = () => {
   return (
-    <div className="scroller">
-      <div className="resume-card-option-info" id="info">
-        <section className="resume-card-option-info-education" id="education" key={'1'}>
+    <div className="resum-info">
+      <div className="scroller">
+        <div className="resum-info-education" id="education">
           <Education />
-        </section>
-        <section className="resume-card-option-info-workHistory" id="workHistory" key={'2'}>
+        </div>
+        <div className="resum-info-workHistory" id="workHistory">
           <WorkHistory />
-        </section>
-        <section className="resume-card-option-info-programmingSkills" id="programmingSkills" key={'3'}>
+        </div>
+        <div className="resum-info-skills" id="programmingSkills">
           <Skills />
-        </section>
-        <section className="resume-card-option-info-projects" id="projects" key={'4'}>
+        </div>
+        <div className="resum-info-projects" id="reprojects">
           <Projects />
-        </section>
-        <section className="resume-card-option-info-interests" id="interests" key={'5'}>
+        </div>
+        <div className="resum-info-interests" id="interests">
           <Interests />
-        </section>
+        </div>
       </div>
     </div>
   );
