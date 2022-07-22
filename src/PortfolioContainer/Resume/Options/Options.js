@@ -10,6 +10,14 @@ import { GoGraph } from "react-icons/go";
 import { FaPalette } from "react-icons/fa";
 
 const Options = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    const element = document.querySelector(target);
+    const location = element.offsetTop;
+    //ScrollIntoView({top: location});
+    console.log(location);
+  };
   const findIcon = (e) => {
     if (e === "FaUserGraduate") return <FaUserGraduate />;
     if (e === "FaHistory") return <FaHistory />;
@@ -23,7 +31,7 @@ const Options = () => {
   React.useEffect(() => {}, [selected]);
 
   return (
-    <div className="resum-options">
+    <nav className="resum-options">
       {links.map((link, index) => (
         <ScrollIntoView
           selector={link.url}
@@ -39,15 +47,23 @@ const Options = () => {
             </div>
           </div>
           <div className="resum-optios-names-colz">
-            <div className="resum-optios-names">
+            <div
+              className={
+                selected === link.text
+                  ? "resum-optios-names-select"
+                  : "resum-optios-names"
+              }
+            >
               <div onClick={() => setSelected(link.text)}>
-                <h1>{link.text}</h1>
+                <a href={link.url} onClick={handleClick}>
+                  {link.text}
+                </a>
               </div>
             </div>
           </div>
         </ScrollIntoView>
       ))}
-    </div>
+    </nav>
   );
 };
 

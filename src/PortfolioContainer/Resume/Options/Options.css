@@ -35,9 +35,11 @@
   width: 85%;
   font-size: 18px;
   color: whitesmoke;
+  transition: all 0.3s ease-out;
 }
 .resum-optios-icons div:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
+  color: rgb(169, 254, 254);
   transform: scale(1.4);
 }
 
@@ -60,20 +62,28 @@
   display: inline-block;
   height: 40px;
   width: 85%;
-  border: white;
   transition: all 1s ease-out;
   transform: scale(1);
 }
+.resum-optios-names-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 90%;
+}
 
 .resum-optios-names-select div {
-  display: flex;
+  display: inline-block;
   height: 40px;
   width: 85%;
-  border-radius: 20px 3px 50px 4px;
-  border: none;
+  border-radius: 0px 3px 50px 0px;
   background-color: #22254b;
+  transition: all 1s ease-in-out;
+  transform: scale(1);
 }
-.resum-optios-names h1 {
+
+.resum-optios-names a {
   display: flex;
   font-size: 15px;
   margin-top: 8px;
@@ -83,11 +93,27 @@
   border-radius: 20px 3px 50px 4px;
   font-weight: 600;
   color: #22254b;
+  text-decoration: none;
+}
+.resum-optios-names-select a {
+  display: flex;
+  font-size: 15px;
+  margin-top: 8px;
+  padding-left: 20px;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px 3px 50px 4px;
+  font-weight: 600;
+  color: whitesmoke;
+  text-decoration: none;
 }
 .resum-optios-names div:hover {
   transition: all 1s ease-in-out;
-  transform: scale(0.8);
-  background-color: #22254b79;
+  transform: scale(1.1);
+  width: 70%;
+
+  margin-left: 15px;
+  background-color: #22254b43;
   color: whitesmoke;
   border: none;
   border-radius: 20px 3px 50px 4px;

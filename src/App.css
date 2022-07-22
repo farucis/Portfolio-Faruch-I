@@ -18,3 +18,7 @@
   --toast-success: #0cbfae;
   --loader-color: #0cbfae;
 }
+
+.end-page{
+  height: 80px;
+}

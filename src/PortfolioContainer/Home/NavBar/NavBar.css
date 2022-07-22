@@ -40,6 +40,7 @@
   margin-right: 16px;
   font-family: "Roboto Slab", serif;
   font-weight: 400;
+  text-decoration: none;
 }
 .navBar-list-active a {
   color: #ff5823;
@@ -126,6 +127,7 @@
     margin-right: 16px;
     font-family: "Roboto Slab", serif;
     font-weight: 400;
+    text-decoration: none;
   }
 }
 

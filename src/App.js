@@ -15,6 +15,7 @@ function App() {
       <Resume />
       <Projects />
       <ContactMe />
+      <div className="end-page"></div>
     </div>
   );
 }
