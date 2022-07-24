@@ -38,6 +38,7 @@ const Options = () => {
           smooth={true}
           scrollOptions={{ block: "nearest" }}
           className="resum-options-container"
+          key={index}
         >
           <div className="resum-optios-icons-colz">
             <div className="resum-optios-icons">

@@ -3,7 +3,8 @@
   overflow-y: hidden;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
-  }
+
+}
 
 /* info: css */
 
@@ -12,6 +13,11 @@
   height: 100%;
 }
 
+.scroller section {
+  display: flex;
+  height: 100%;
+}
+/*
 .resum-info-education {
   display: flex;
   height: 100%;
@@ -32,7 +38,7 @@
   display: flex;
   height: 100%;
 }
-
+ */
 @media screen and (max-width: 1110px) {
   .resum-info {
     height: 360px;

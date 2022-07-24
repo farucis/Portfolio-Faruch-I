@@ -52,13 +52,13 @@ const Skills = () => {
     <div className="skills-container">
       <div className="skills-container-s">
         {skills1.map((skill, index) => (
-          <Skill name={skill.name} fill={skill.fill} index={index} />
+          <Skill name={skill.name} fill={skill.fill} key={index} />
         ))}
       </div>
 
       <div className="skills-container-s">
         {skills2.map((skill, index) => (
-          <Skill name={skill.name} fill={skill.fill} index={index} />
+          <Skill name={skill.name} fill={skill.fill} key={index} />
         ))}
       </div>
     </div>
@@ -70,7 +70,7 @@ const Skill = (props) => {
     document.documentElement.style.setProperty("--fill-skill", `${skill}%`);
   };
   return (
-    <div className="skill-container" key={props.index}>
+    <div className="skill-container">
       <li>{props.name}</li>
       {setFill(props.fill)}
       <div className="skill-bar">

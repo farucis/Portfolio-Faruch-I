@@ -23,7 +23,7 @@ const Interests = () => {
   return (
     <div className="interests-container">
       {InterestsList.map((interest, index) => (
-        <Interest name={interest.name} info={interest.info} index={interest.key} />
+        <Interest name={interest.name} info={interest.info} key={index} />
       ))}
     </div>
   );
@@ -31,7 +31,7 @@ const Interests = () => {
 
 const Interest = (props) => {
   return (
-    <div className="interest" key={props.index}>
+    <div className="interest">
       <div className="interest-name-title">
         <li>{props.name}</li>
       </div>

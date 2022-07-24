@@ -16,18 +16,16 @@ const AboutCard = () => {
   return (
     <div className="aboutCard-container">
       <div className="aboutCard-parent">
-
         <div className="aboutCard-image" />
 
         <div className="aboutCard-text-container">
-            
           <div className="aboutCard-text-info">
             <p>{infoText}</p>
           </div>
           <div className="aboutCard-text-details">
             <h1>Here are a Few Highlights</h1>
-            {detailsText.map((detail) => (
-              <div className="detail-option">
+            {detailsText.map((detail, index) => (
+              <div className="detail-option" key={index}>
                 🔴
                 <h2>{detail}</h2>
               </div>
@@ -43,7 +41,6 @@ const AboutCard = () => {
             </a>
           </div>
         </div>
-
       </div>
     </div>
   );
