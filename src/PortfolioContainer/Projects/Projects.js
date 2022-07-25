@@ -9,6 +9,7 @@ const projects = [
     tehcnologies: "React, BootStrap",
     url: "https://portfolio-faruch.herokuapp.com/",
     video_url: null,
+    source_url: "https://github.com/farucis/Portfolio-Faruch-I",
   },
   {
     name: "Shapeit",
@@ -17,6 +18,7 @@ const projects = [
     url: "https://expo.dev/@faruch/Shapeit",
     video_url:
       "https://user-images.githubusercontent.com/58651410/169829260-d985197e-d167-48ce-9105-f3f6cd35f738.mp4",
+    source_url: "https://github.com/farucis/Shapeit-Final",
   },
   {
     name: "Scrum Master",
@@ -24,6 +26,15 @@ const projects = [
     tehcnologies: "React-native, react-redux, firebase",
     url: null,
     video_url: null,
+    source_url: "https://github.com/farucis/ScruMaster",
+  },
+  {
+    name: "Accessibility",
+    summary: "App for mute and deaf people",
+    tehcnologies: "React Native, google-cloud-api",
+    url: null,
+    video_url: null,
+    source_url: "https://github.com/farucis/Accessibility",
   },
   {
     name: "Smart Book",
@@ -31,31 +42,35 @@ const projects = [
     tehcnologies: "asp.net, c#, sql server",
     url: null,
     video_url: null,
+    source_url: "https://github.com/farucis/SmartBook-1",
   },
   {
-    name: "nnnnn",
-    summary: "ssssss",
-    tehcnologies: "tttttt",
+    name: "Recommendation System ",
+    summary: "CF/CBF and Hybrid Recommendation System ",
+    tehcnologies: "Python, numpy, pandas, sklearn, matplotlib",
     url: null,
     video_url: null,
+    source_url: "https://github.com/farucis/Hybrid-Recommendation-system",
   },
   {
-    name: "nnnnn",
-    summary: "ssssss",
-    tehcnologies: "tttttt",
+    name: "Classification Manuscript",
+    summary: "Classification Of Manuscript By Gender",
+    tehcnologies: "Python, pandas, numpy, sklearn, skimage, tabulate",
     url: null,
     video_url: null,
+    source_url:
+      "https://github.com/farucis/Classification-of-manuscript-by-gender",
   },
 ];
 
-const Project = () => {
+const Project = (name) => {
   return (
     <div className="demo-projects-container">
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
         <div className="p-scroll">
           {projects.map((project, index) => (
-            <section key={index}>
+            <section key={index} id={project.name}>
               <ProjectSection project={project} />
             </section>
           ))}
@@ -69,7 +84,7 @@ const ProjectSection = ({ project }) => {
   const ShowVideo = () => {
     if (project.video_url) {
       return (
-        <video className="video-show" width="90%" height="50%" controls>
+        <video className="video-show" width="90%" height="40%" controls>
           <source src={project.video_url} type="video/mp4" />
         </video>
       );
@@ -77,10 +92,8 @@ const ProjectSection = ({ project }) => {
   };
   const [showVideo, setShowVideo] = React.useState(false);
 
-  React.useEffect(() => {});
-
   return (
-    <div className="project-section-container" id={project.name}>
+    <div className="project-section-container">
       {/*   ///Project Header///   */}
       <div className="project-section-header">
         <div className="project-section-title">
@@ -117,7 +130,11 @@ const ProjectSection = ({ project }) => {
             <a href={project.url}>
               <span className="btn highlighted-btn">App Demo</span>
             </a>
-          ) : null}
+          ) : (
+            <a href={project.source_url}>
+              <span className="btn highlighted-btn">Source Code</span>
+            </a>
+          )}
         </div>
       </div>
     </div>
