@@ -4,32 +4,47 @@ import "./Projects.css";
 import TitleHeader from "../Header/TitleHeader";
 const projects = [
   {
-    name: "Personal portfolio",
-    summary: "my persnoal web site",
-    tehcnolgies: "React, BootStrap",
+    name: "Portfolio",
+    summary: "My Persnoal Web Site",
+    tehcnologies: "React, BootStrap",
     url: "https://portfolio-faruch.herokuapp.com/",
-    video_url: "https://youtu.be/Personal",
+    video_url: null,
   },
   {
-    name: "shepit",
-    summary: "calorie calculator",
-    tehcnolgies: "React-native, reacr-redux, firebase",
-    url: "none",
-    video_url: "https://youtu.be/shepit",
+    name: "Shapeit",
+    summary: "Daily Calorie Tracking",
+    tehcnologies: "React-native, react-redux, firebase, Rest API",
+    url: "https://expo.dev/@faruch/Shapeit",
+    video_url:
+      "https://user-images.githubusercontent.com/58651410/169829260-d985197e-d167-48ce-9105-f3f6cd35f738.mp4",
   },
   {
-    name: "scrummaster",
-    summary: "manged project in scrum whit aigle",
-    tehcnolgies: "React-native, reacr-redux, firebase",
-    url: "none",
-    video_url: "https://youtu.be/scrummaster",
+    name: "Scrum Master",
+    summary: "Agile Project Management",
+    tehcnologies: "React-native, react-redux, firebase",
+    url: null,
+    video_url: null,
   },
   {
-    name: "smartbook",
-    summary: "book reding web site",
-    tehcnolgies: "asp.net, c#, sql server",
-    url: "none",
-    video_url: "https://youtu.be/smartbook",
+    name: "Smart Book",
+    summary: "Book Reding Web Site",
+    tehcnologies: "asp.net, c#, sql server",
+    url: null,
+    video_url: null,
+  },
+  {
+    name: "nnnnn",
+    summary: "ssssss",
+    tehcnologies: "tttttt",
+    url: null,
+    video_url: null,
+  },
+  {
+    name: "nnnnn",
+    summary: "ssssss",
+    tehcnologies: "tttttt",
+    url: null,
+    video_url: null,
   },
 ];
 
@@ -38,23 +53,73 @@ const Project = () => {
     <div className="demo-projects-container">
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
-        {projects.map((project,index) => (
-          <section key={index}>
-            <ProjectSection project={project} />
-          </section>
-        ))}
+        <div className="p-scroll">
+          {projects.map((project, index) => (
+            <section key={index}>
+              <ProjectSection project={project} />
+            </section>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 const ProjectSection = ({ project }) => {
+  const ShowVideo = () => {
+    if (project.video_url) {
+      return (
+        <video className="video-show" width="90%" height="50%" controls>
+          <source src={project.video_url} type="video/mp4" />
+        </video>
+      );
+    }
+  };
+  const [showVideo, setShowVideo] = React.useState(false);
+
+  React.useEffect(() => {});
+
   return (
-    <div className="">
-      {project.name}
-      {project.summary}
-      {project.tehcnolgies}
-      {project.url}
+    <div className="project-section-container" id={project.name}>
+      {/*   ///Project Header///   */}
+      <div className="project-section-header">
+        <div className="project-section-title">
+          <h1>{project.name}</h1>
+        </div>
+        <div className="project-section-summary">
+          <h2>{project.summary}</h2>
+        </div>
+      </div>
+
+      {/*   ///Project Video///   */}
+      {showVideo ? <ShowVideo /> : <div className="project-section-image" />}
+
+      {/*   ///Project Tehcnologies///   */}
+      <div className="project-section-options">
+        <div className="project-section-tehcnologies">
+          <h2>
+            Tehcnologies Used:<span> {project.tehcnologies} </span>
+          </h2>
+        </div>
+
+        {/*   ///Project buttons///   */}
+        <div className="project-section-buttons">
+          {project.video_url ? (
+            <button
+              className="btn primary-btn"
+              onClick={() => setShowVideo(!showVideo)}
+            >
+              <span>App Video</span>
+            </button>
+          ) : null}
+
+          {project.url ? (
+            <a href={project.url}>
+              <span className="btn highlighted-btn">App Demo</span>
+            </a>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 };
