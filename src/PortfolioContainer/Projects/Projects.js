@@ -84,7 +84,7 @@ const ProjectSection = ({ project }) => {
   const ShowVideo = () => {
     if (project.video_url) {
       return (
-        <video className="video-show" width="90%" height="40%" controls>
+        <video className="video-show" width="90%" height="160px" controls>
           <source src={project.video_url} type="video/mp4" />
         </video>
       );
