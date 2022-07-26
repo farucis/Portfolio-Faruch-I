@@ -6,6 +6,7 @@ import Home from "./PortfolioContainer/Home/Home";
 import Projects from "./PortfolioContainer/Projects/Projects";
 import Resume from "./PortfolioContainer/Resume/Resume";
 import ContactMe from "./PortfolioContainer/ContactMe/ContactMe";
+import BackToTop from "./PortfolioContainer/Header/BackToTop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Resume />
       <Projects />
       <ContactMe />
+      <BackToTop />
       <div className="end-page"></div>
     </div>
   );
