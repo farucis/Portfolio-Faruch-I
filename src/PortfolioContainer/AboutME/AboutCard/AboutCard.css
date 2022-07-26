@@ -27,6 +27,7 @@
   background-image: url("../../../assets/Home/profilephoto.jpeg");
   background-size: cover;
   background-position: center;
+  background-position-y: -6px;
 }
 
 .aboutCard-text-container {

@@ -14,7 +14,7 @@ const projects = [
   {
     name: "Shapeit",
     summary: "Daily Calorie Tracking",
-    tehcnologies: "React-native, react-redux, firebase, Rest API",
+    tehcnologies: "React-native, react-redux, firebase, Rest API, Python",
     url: "https://expo.dev/@faruch/Shapeit",
     video_url:
       "https://user-images.githubusercontent.com/58651410/169829260-d985197e-d167-48ce-9105-f3f6cd35f738.mp4",
