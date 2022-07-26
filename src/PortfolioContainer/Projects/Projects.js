@@ -1,5 +1,6 @@
 import React from "react";
 import "./Projects.css";
+import { useScroll } from "react-use";
 
 import TitleHeader from "../Header/TitleHeader";
 const projects = [
@@ -64,17 +65,56 @@ const projects = [
 ];
 
 const Project = (name) => {
+  const projectsScrollRef = React.useRef(null);
+  const { x } = useScroll(projectsScrollRef);
+  const offseting = 314;
+
+  const scrollToNext = (ref) => {
+    ref.current.scrollTo({
+      left: x + offseting,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToBack = (ref) => {
+    ref.current.scrollTo({
+      left: x - offseting,
+      behavior: "smooth",
+    });
+  };
+
+  const width = window.innerWidth;
   return (
     <div className="demo-projects-container">
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
-        <div className="p-scroll">
+        {width > 768 ? (
+          <button
+            className="btn primary-btn"
+            onClick={() => scrollToBack(projectsScrollRef)}
+          >
+            back
+          </button>
+        ) : null}
+        <div className="p-scroll" ref={projectsScrollRef}>
           {projects.map((project, index) => (
-            <section key={index} id={project.name}>
+            <section
+              key={index}
+              id={project.name}
+              //onClick={() => scrollToNext(projectsScrollRef)}
+            >
               <ProjectSection project={project} />
             </section>
           ))}
         </div>
+        {width > 768 ? (
+          <button
+            className="btn primary-btn"
+            onClick={() => scrollToNext(projectsScrollRef)}
+          >
+            next
+          </button>
+        ) : null}
       </div>
     </div>
   );
