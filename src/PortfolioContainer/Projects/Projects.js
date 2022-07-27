@@ -1,6 +1,7 @@
 import React from "react";
 import "./Projects.css";
 import { useScroll } from "react-use";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import TitleHeader from "../Header/TitleHeader";
 const projects = [
@@ -46,7 +47,7 @@ const projects = [
     source_url: "https://github.com/farucis/SmartBook-1",
   },
   {
-    name: "Recommendation System ",
+    name: "Recommendation System",
     summary: "CF/CBF and Hybrid Recommendation System ",
     tehcnologies: "Python, numpy, pandas, sklearn, matplotlib",
     url: null,
@@ -65,15 +66,24 @@ const projects = [
 ];
 
 const Project = (name) => {
+  const width = window.innerWidth;
+
   const projectsScrollRef = React.useRef(null);
   const { x } = useScroll(projectsScrollRef);
-  const offseting = 314;
+  const offseting = 320;
+  const [currentProject, setCurrentProject] = React.useState("Portfolio");
+
+  //console.log(document.getElementById("Shapeit").offsetLeft / offseting);
 
   const scrollToNext = (ref) => {
     ref.current.scrollTo({
       left: x + offseting,
       behavior: "smooth",
     });
+    if (Math.round(x / offseting) + 1 <= projects.length - 1) {
+      let CurrentProjectOffset = Math.round(x / offseting) + 1;
+      setCurrentProject(projects[CurrentProjectOffset].name);
+    }
   };
 
   const scrollToBack = (ref) => {
@@ -81,38 +91,71 @@ const Project = (name) => {
       left: x - offseting,
       behavior: "smooth",
     });
+    if (Math.round(x / offseting) - 1 >= 0) {
+      let CurrentProjectOffset = Math.round(x / offseting) - 1;
+      setCurrentProject(projects[CurrentProjectOffset].name);
+    }
   };
 
-  const width = window.innerWidth;
+  const scrollByOffset = (ref, name) => {
+    const offsetCurrent = document.getElementById(currentProject).offsetLeft;
+    const offset = document.getElementById(name).offsetLeft;
+
+    ref.current.scrollTo({
+      left: offset,
+      behavior: "smooth",
+    });
+
+    if (width < 810) {
+      let CurrentProjectOffset = Math.round(offset / 300) - 1;
+
+      if (width <= 375) CurrentProjectOffset = Math.round(offset / 260) - 1;
+
+      setCurrentProject(projects[CurrentProjectOffset].name);
+    } else {
+      if (offsetCurrent > offset) scrollToBack(ref);
+      else if (offsetCurrent < offset) scrollToNext(ref);
+    }
+  };
+
   return (
     <div className="demo-projects-container">
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
-        {width > 768 ? (
+        {width > 810 ? (
           <button
             className="btn primary-btn"
+            style={{ width: "120px" }}
             onClick={() => scrollToBack(projectsScrollRef)}
           >
-            Previous
+            <FaArrowLeft /> Previous
           </button>
         ) : null}
         <div className="p-scroll" ref={projectsScrollRef}>
+          <BlankSpace place="start" />
           {projects.map((project, index) => (
             <section
+              className={
+                currentProject === project.name
+                  ? "current-project"
+                  : "other-projects"
+              }
               key={index}
               id={project.name}
-              //onClick={() => scrollToNext(projectsScrollRef)}
+              onClick={() => scrollByOffset(projectsScrollRef, project.name)}
             >
               <ProjectSection project={project} />
             </section>
           ))}
+          <BlankSpace place="end" />
         </div>
-        {width > 768 ? (
+        {width > 810 ? (
           <button
             className="btn primary-btn"
+            style={{ width: "120px" }}
             onClick={() => scrollToNext(projectsScrollRef)}
           >
-            Next
+            Next <FaArrowRight />
           </button>
         ) : null}
       </div>
@@ -177,6 +220,17 @@ const ProjectSection = ({ project }) => {
           )}
         </div>
       </div>
+    </div>
+  );
+};
+
+const BlankSpace = (props) => {
+  return (
+    <div
+      id={props.place}
+      //onClick={() => scrollToNext(projectsScrollRef)}
+    >
+      <div className="project-blank-section-container"></div>
     </div>
   );
 };
