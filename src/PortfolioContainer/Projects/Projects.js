@@ -93,7 +93,7 @@ const Project = (name) => {
             className="btn primary-btn"
             onClick={() => scrollToBack(projectsScrollRef)}
           >
-            back
+            Previous
           </button>
         ) : null}
         <div className="p-scroll" ref={projectsScrollRef}>
@@ -112,7 +112,7 @@ const Project = (name) => {
             className="btn primary-btn"
             onClick={() => scrollToNext(projectsScrollRef)}
           >
-            next
+            Next
           </button>
         ) : null}
       </div>
