@@ -47,7 +47,7 @@ const Options = () => {
               </div>
             </div>
           </div>
-          <div className="resum-optios-names-colz">
+          <div className="resum-optios-names-colz list-group ">
             <div
               className={
                 selected === link.text
@@ -56,7 +56,11 @@ const Options = () => {
               }
             >
               <div onClick={() => setSelected(link.text)}>
-                <a href={link.url} onClick={handleClick}>
+                <a
+                  className=""
+                  href={link.url}
+                  onClick={handleClick}
+                >
                   {link.text}
                 </a>
               </div>

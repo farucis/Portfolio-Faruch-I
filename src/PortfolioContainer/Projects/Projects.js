@@ -65,8 +65,8 @@ const projects = [
   },
 ];
 
-const Project = (name) => {
-  const width = window.innerWidth;
+const Project = () => {
+  let width = window.innerWidth;
 
   const projectsScrollRef = React.useRef(null);
   const { x } = useScroll(projectsScrollRef);
@@ -117,9 +117,13 @@ const Project = (name) => {
       else if (offsetCurrent < offset) scrollToNext(ref);
     }
   };
+  React.useEffect(() => {
+    scrollByOffset(projectsScrollRef, "Shapeit");
+  }, []);
 
   return (
     <div className="demo-projects-container">
+      
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
         {width > 810 ? (

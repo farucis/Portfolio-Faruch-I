@@ -113,10 +113,14 @@
   width: 70%;
 
   margin-left: 15px;
-  background-color: #22254b43;
+  background-color: whitesmoke;
   color: whitesmoke;
   border: none;
   border-radius: 20px 3px 50px 4px;
+}
+
+.list-group-item-action {
+  border: none;
 }
 
 @media screen and (max-width: 1020px) {
