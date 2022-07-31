@@ -50,5 +50,27 @@
   }
   .title-header-image-backround {
     width: 80%;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+}
+
+.arroweUp-infinite {
+  animation: scroollUp 0.5s alternate ease 8.5;
+  color: rgb(69 211 255 / 62%);
+}
+
+@keyframes scroollUp {
+  0% {
+    transform: translateY(5px) scale(1);
+  }
+  50% {
+    transform: translateY(0px) scale(1.15);
+  }
+  75% {
+    transform: translateY(-1px) scale(1.225);
+  }
+
+  100% {
+    transform: translateY(-2px) scale(1.3);
   }
 }

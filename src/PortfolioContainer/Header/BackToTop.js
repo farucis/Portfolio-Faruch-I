@@ -1,4 +1,6 @@
 import React from "react";
+import "./TitleHeader.css";
+
 import { useWindowScroll } from "react-use";
 import { FaArrowUp } from "react-icons/fa";
 
@@ -43,13 +45,12 @@ const BackToTop = () => {
             backgroundColor: "#708090",
             borderRadius: "30%",
             border: "none",
-            color: "black",
             transition: "all 1s ease-in-out",
           }}
           onClick={ScrollToTop}
         >
-          <div>
-            <FaArrowUp />
+          <div className="arroweUp-infinite">
+            <FaArrowUp className="arroweUp-infinite" />
           </div>
         </button>
       )}
