@@ -1,69 +1,14 @@
 import React from "react";
 import "./Projects.css";
 import { useScroll } from "react-use";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaLongArrowAltLeft,
+  FaLongArrowAltRight,
+} from "react-icons/fa";
+import { projectsDB } from "./projectsDB";
 import TitleHeader from "../Header/TitleHeader";
-const projects = [
-  {
-    name: "Portfolio",
-    summary: "My Persnoal Web Site",
-    tehcnologies: "React, BootStrap",
-    url: "https://portfolio-faruch.herokuapp.com/",
-    video_url: null,
-    source_url: "https://github.com/farucis/Portfolio-Faruch-I",
-  },
-  {
-    name: "Shapeit",
-    summary: "Daily Calorie Tracking",
-    tehcnologies: "React-native, react-redux, firebase, Rest API, Python",
-    url: "https://expo.dev/@faruch/Shapeit",
-    video_url:
-      "https://user-images.githubusercontent.com/58651410/169829260-d985197e-d167-48ce-9105-f3f6cd35f738.mp4",
-    source_url: "https://github.com/farucis/Shapeit-Final",
-  },
-  {
-    name: "Scrum Master",
-    summary: "Agile Project Management",
-    tehcnologies: "React-native, react-redux, firebase",
-    url: null,
-    video_url: null,
-    source_url: "https://github.com/farucis/ScruMaster",
-  },
-  {
-    name: "Accessibility",
-    summary: "App for mute and deaf people",
-    tehcnologies: "React Native, google-cloud-api",
-    url: null,
-    video_url: null,
-    source_url: "https://github.com/farucis/Accessibility",
-  },
-  {
-    name: "Smart Book",
-    summary: "Book Reding Web Site",
-    tehcnologies: "asp.net, c#, sql server",
-    url: null,
-    video_url: null,
-    source_url: "https://github.com/farucis/SmartBook-1",
-  },
-  {
-    name: "Recommendation System",
-    summary: "CF/CBF and Hybrid Recommendation System ",
-    tehcnologies: "Python, numpy, pandas, sklearn, matplotlib",
-    url: null,
-    video_url: null,
-    source_url: "https://github.com/farucis/Hybrid-Recommendation-system",
-  },
-  {
-    name: "Classification Manuscript",
-    summary: "Classification Of Manuscript By Gender",
-    tehcnologies: "Python, pandas, numpy, sklearn, skimage, tabulate",
-    url: null,
-    video_url: null,
-    source_url:
-      "https://github.com/farucis/Classification-of-manuscript-by-gender",
-  },
-];
 
 const Project = () => {
   let width = window.innerWidth;
@@ -73,52 +18,50 @@ const Project = () => {
   const offseting = 320;
   const [currentProject, setCurrentProject] = React.useState("Portfolio");
 
-  //console.log(document.getElementById("Shapeit").offsetLeft / offseting);
-
   const scrollToNext = (ref) => {
     ref.current.scrollTo({
-      left: x + offseting,
+      left: width > 810 ? x + offseting : x + offseting - 100,
       behavior: "smooth",
     });
-    if (Math.round(x / offseting) + 1 <= projects.length - 1) {
-      let CurrentProjectOffset = Math.round(x / offseting) + 1;
-      setCurrentProject(projects[CurrentProjectOffset].name);
+
+    if (
+      Math.round(width > 810 ? x / offseting : (x - 100) / offseting) + 1 <=
+      projectsDB.length - 1
+    ) {
+      let CurrentProjectOffset =
+        Math.round(width > 810 ? x / offseting : (x - 100) / offseting) + 1;
+      setCurrentProject(projectsDB[CurrentProjectOffset].name);
     }
   };
 
   const scrollToBack = (ref) => {
     ref.current.scrollTo({
-      left: x - offseting,
+      left: width > 810 ? x - offseting : x - offseting - 100,
       behavior: "smooth",
     });
-    if (Math.round(x / offseting) - 1 >= 0) {
-      let CurrentProjectOffset = Math.round(x / offseting) - 1;
-      setCurrentProject(projects[CurrentProjectOffset].name);
+    if (
+      Math.round(width > 810 ? x / offseting : (x - 100) / offseting) - 1 >=
+      0
+    ) {
+      let CurrentProjectOffset =
+        Math.round(width > 810 ? x / offseting : (x - 100) / offseting) - 1;
+      setCurrentProject(projectsDB[CurrentProjectOffset].name);
     }
   };
 
-  const scrollByOffset = (ref, name) => {
-    const offsetCurrent = document.getElementById(currentProject).offsetLeft;
-    const offset = document.getElementById(name).offsetLeft;
+  const scrollByOffset = (scrollScreenRef, name) => {
+    let projectIndex = projectsDB.findIndex((project) => project.name === name);
+    const offsetP = document.getElementById(name).offsetLeft;
 
-    ref.current.scrollTo({
-      left: offset,
+    scrollScreenRef.current.scrollTo({
+      left: width < 579 ? offsetP : offseting * projectIndex,
       behavior: "smooth",
     });
-
-    if (width < 810) {
-      let CurrentProjectOffset = Math.round(offset / 300) - 1;
-
-      if (width <= 375) CurrentProjectOffset = Math.round(offset / 260) - 1;
-
-      setCurrentProject(projects[CurrentProjectOffset].name);
-    } else {
-      if (offsetCurrent > offset) scrollToBack(ref);
-      else if (offsetCurrent < offset) scrollToNext(ref);
-    }
+    setCurrentProject(projectsDB[projectIndex].name);
   };
+
   React.useEffect(() => {
-    scrollByOffset(projectsScrollRef, "Shapeit");
+    scrollByOffset(projectsScrollRef, "Portfolio");
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
@@ -136,7 +79,7 @@ const Project = () => {
         ) : null}
         <div className="p-scroll" ref={projectsScrollRef}>
           <BlankSpace place="start" />
-          {projects.map((project, index) => (
+          {projectsDB.map((project, index) => (
             <section
               className={
                 currentProject === project.name
@@ -145,7 +88,10 @@ const Project = () => {
               }
               key={index}
               id={project.name}
-              onClick={() => scrollByOffset(projectsScrollRef, project.name)}
+              onClick={() =>
+                project.name !== currentProject &&
+                scrollByOffset(projectsScrollRef, project.name)
+              }
             >
               <ProjectSection project={project} />
             </section>
@@ -162,6 +108,12 @@ const Project = () => {
           </button>
         ) : null}
       </div>
+      <Counter
+        currentProject={currentProject}
+        scrollToBack={scrollToBack}
+        scrollToNext={scrollToNext}
+        projectsScrollRef={projectsScrollRef}
+      />
     </div>
   );
 };
@@ -203,14 +155,14 @@ const ProjectSection = ({ project }) => {
 
         {/*   ///Project buttons///   */}
         <div className="project-section-buttons">
-          {project.video_url ? (
+          {project.video_url && (
             <button
               className="btn primary-btn"
               onClick={() => setShowVideo(!showVideo)}
             >
               <span>App Video</span>
             </button>
-          ) : null}
+          )}
 
           {project.url ? (
             <a href={project.url}>
@@ -226,16 +178,50 @@ const ProjectSection = ({ project }) => {
     </div>
   );
 };
+export default Project;
 
 const BlankSpace = (props) => {
   return (
-    <div
-      id={props.place}
-      //onClick={() => scrollToNext(projectsScrollRef)}
-    >
+    <div id={props.place}>
       <div className="project-blank-section-container"></div>
     </div>
   );
 };
 
-export default Project;
+const Counter = ({
+  currentProject,
+  scrollToBack,
+  scrollToNext,
+  projectsScrollRef,
+}) => {
+  let width = window.innerWidth;
+
+  return (
+    <div className="counter-container">
+      {width < 810 && (
+        <label className="arrow-icon">
+          <i onClick={() => scrollToBack(projectsScrollRef)}>
+            <FaLongArrowAltLeft />
+          </i>
+        </label>
+      )}
+      {projectsDB.map((project, index) => (
+        <div
+          key={index}
+          className={
+            project.name === currentProject
+              ? "counter-circle-selected"
+              : "counter-circle"
+          }
+        />
+      ))}
+      {width < 810 && (
+        <label className="arrow-icon">
+          <i onClick={() => scrollToNext(projectsScrollRef)}>
+            <FaLongArrowAltRight />
+          </i>
+        </label>
+      )}
+    </div>
+  );
+};

@@ -9,7 +9,7 @@
 .demo-projects-parent {
   display: flex;
   left: 0;
-  height: 540px;
+  height: 500px;
   width: 100vw;
   align-self: center;
   align-items: center;
@@ -23,6 +23,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   width: 990px;
+  height: 100%;
 }
 .demo-projects-parent section {
   scroll-snap-align: center;
@@ -47,9 +48,11 @@
 .demo-projects-parent .current-project {
   scroll-snap-align: center;
   transform: scale(1.2);
-  border-radius: 10px;
+  border-radius: 8px;
   opacity: 1;
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   z-index: 100;
   transition: all 0.8s ease-in-out 0.2s;
   transition-delay: 0.3s;
@@ -104,13 +107,18 @@
     ),
     linear-gradient(-45deg, rgba(0, 204, 204, 0.5) 50%, transparent 50%);
 }
-
+.demo-projects-parent .other-projects {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
 .demo-projects-parent .other-projects:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   transform: scale(1.05);
   border-radius: 10px;
   opacity: 0.9;
-  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.5);
-  z-index: 80;
   transition: all 0.4s ease-in-out;
   background-color: #9d9d9d;
 }
@@ -196,6 +204,51 @@
   flex-direction: column;
   height: 200px;
 }
+
+/* Counter: css */
+
+.counter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  gap: 5px;
+}
+
+.counter-circle {
+  background-color: #eee;
+  border: 1px solid rgb(166, 166, 166);
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  transition: all 0.5s ease-in-out;
+}
+.counter-circle-selected {
+  background-color: var(--light-blue-shadow);
+  border: 1px solid var(--sea-green);
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  translate: 0px -5px;
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow-icon {
+  margin-inline: 46px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+}
+
+.arrow-icon i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #1f2235;
+}
+
 /* width sizes: css */
 
 @media screen and (max-width: 1110px) {
@@ -203,11 +256,9 @@
 
 @media screen and (max-width: 810px) {
   .p-scroll {
-    width: 90vw;
     overflow-x: scroll;
   }
   .demo-projects-parent section {
-    height: 400px;
     scroll-snap-align: center;
     margin: 5vw;
   }
