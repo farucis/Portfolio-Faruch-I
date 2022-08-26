@@ -75,7 +75,11 @@ const NavBar = () => {
                     </div>
                   ) : (
                     <div onClick={() => setIsActive(bar)}>
-                      <a href={`#${bar}`} onClick={handleClick}>
+                      <a
+                        className="hover-underline-animation"
+                        href={`#${bar}`}
+                        onClick={handleClick}
+                      >
                         {bar}
                       </a>
                     </div>
@@ -97,7 +101,9 @@ const NavBarListMobileOptions = (props) => {
         return (
           <div key={index}>
             <div onClick={() => props.setIsOpen(false)}>
-              <a href={`#${bar}`} onClick={props.handleClick}>{bar}</a>
+              <a href={`#${bar}`} onClick={props.handleClick}>
+                {bar}
+              </a>
             </div>
           </div>
         );

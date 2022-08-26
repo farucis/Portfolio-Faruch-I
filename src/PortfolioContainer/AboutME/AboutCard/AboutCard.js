@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollTolocation } from "../../Home/Profile/Profile";
 import "./AboutCard.css";
 
 const AboutCard = () => {
@@ -32,9 +33,11 @@ const AboutCard = () => {
             ))}
           </div>
           <div className="About-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{" "}
+            <button
+              className="btn primary-btn"
+              onClick={() => scrollTolocation()}
+            >
+              Hire Me
             </button>
             <a href="Faruch - CV.pdf" download="Faruch Ismailov CV">
               <button className="btn highlighted-btn">Get Resume</button>

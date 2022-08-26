@@ -22,6 +22,7 @@
   font-family: "Roboto Slab", serif;
   font-weight: 900;
   opacity: 0.94;
+  width: 300px;
 }
 .contact-info-container h2 {
   color: var(--toast-shadow);
@@ -33,14 +34,14 @@
   opacity: 0.9;
 }
 
-.contact-info-icons .contact-info-icon i {
+.contact-info-icons .contact-info-icon label {
   font-size: 20px;
   margin: 10px 0px 10px 20px;
   color: azure;
   opacity: 0.94;
   transition: 0.3s ease-in-out;
 }
-.contact-info-icons .contact-info-icon i:hover {
+.contact-info-icons .contact-info-icon label:hover {
   color: rgb(169, 254, 254);
   transform: scale(2);
   transition: 0.5s ease-out;
@@ -50,6 +51,26 @@
   border-radius: 8px;
   width: 100%;
   opacity: 0.8;
+}
+
+.infi-input-loop {
+  height: 34px;
+  background-color: azure;
+  width: 3px;
+  margin-left: 10px;
+  margin-bottom: 12px;
+  align-self: center;
+  animation: inputLoop 0.4s alternate infinite;
+}
+
+@keyframes inputLoop {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 940px) {

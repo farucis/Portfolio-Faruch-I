@@ -50,6 +50,39 @@
   font-weight: 400;
 }
 
+
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #e6e6e6;
+
+}
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  transform: scaleX(0);
+  height: 3px;
+  border-radius: 2px;
+  margin-left: -5px;
+  margin-top: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6a0061;
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in-out;
+}
+
+
+
+
+
 @media screen and (max-width: 910px) {
   .navBar-parent {
     margin-right: 50px;
@@ -130,6 +163,9 @@
     text-decoration: none;
   }
 }
+
+
+
 
 @media screen and (max-width: 460px) {
     .navBar-title h1 {

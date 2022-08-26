@@ -1,5 +1,7 @@
 import React from "react";
 import Typical from "react-typical";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 import "./Profile.css";
 
@@ -11,27 +13,31 @@ const Profile = () => {
           <div className="colz">
             <div className="colz-icon">
               <a href="https://www.linkedin.com/in/faruch-ismailov/">
-                <i className="fa fa-linkedin-square"></i>
+                <label>
+                  <FaLinkedin />
+                </label>
               </a>
               <a href="https://github.com/farucis">
-                <i className="fa fa-github-square"></i>
+                <label>
+                  <FaGithubSquare />
+                </label>
               </a>
               <a href="https://github.com/farucis">
-                <i className="fa fa-google-plus-square"></i>
+                <label>
+                  <SiGmail />
+                </label>
               </a>
             </div>
           </div>
 
           <div className="profile-details-name">
             <span className="primary-text">
-              {" "}
               Hello, I'm <span className="highlighted-text">Faruch</span>
             </span>
           </div>
 
           <div className="profile-details-role">
             <span className="primary-text">
-              {" "}
               <h1>
                 <Typical
                   loop={Infinity}
@@ -57,9 +63,11 @@ const Profile = () => {
           </div>
 
           <div className="profile-options">
-            <button className="btn primary-btn">
-              {""}
-              Hire Me{" "}
+            <button
+              className="btn primary-btn"
+              onClick={() => scrollTolocation()}
+            >
+              Hire Me
             </button>
             <a href="Faruch - CV.pdf" download="Faruch Ismailov CV">
               <button className="btn highlighted-btn">Get Resume</button>
@@ -76,3 +84,12 @@ const Profile = () => {
 };
 
 export default Profile;
+
+//////////////////////////////////////////////////////////////////////////////////////////
+export const scrollTolocation = (locationName = "contact") => {
+  const contactMeElement = document.getElementById(locationName);
+  const location = contactMeElement.offsetTop;
+  window.scrollTo({
+    top: location,
+  });
+};

@@ -12,14 +12,14 @@
   color: azure;
 }
 
-.colz .colz-icon i {
+.colz .colz-icon label {
   color: white;
   padding: 10px;
   padding-left: 0px;
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }
-.colz .colz-icon i:hover {
+.colz .colz-icon label:hover {
   transform: scale(2);
   transition: 0.5s ease-out;
 }

@@ -119,11 +119,10 @@ const Project = () => {
   };
   React.useEffect(() => {
     scrollByOffset(projectsScrollRef, "Shapeit");
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="demo-projects-container">
-      
       <TitleHeader title="Projects" subTitle="Lets See Projects Demo" />
       <div className="demo-projects-parent">
         {width > 810 ? (

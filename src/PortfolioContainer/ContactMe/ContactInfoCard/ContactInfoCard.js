@@ -1,21 +1,32 @@
 import React from "react";
 import "./ContactInfoCard.css";
+import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 
 const ContactInfoCard = () => {
   return (
     <div className="contact-info-container">
       <div className="contact-info-parent">
-        <h1>Get In Touch 📧</h1>
+        <div style={{ width: "330px", display: "flex" }}>
+          <h1>Get In Touch 📧</h1>
+          <span className="infi-input-loop" />
+        </div>
         <div className="contact-info-icons">
           <div className="contact-info-icon">
             <a href="https://www.linkedin.com/in/faruch-ismailov/">
-              <i className="fa fa-linkedin-square"></i>
+              <label>
+                <FaLinkedin />
+              </label>
             </a>
             <a href="https://github.com/farucis">
-              <i className="fa fa-github-square"></i>
+              <label>
+                <FaGithubSquare />
+              </label>
             </a>
             <a href="https://github.com/farucis">
-              <i className="fa fa-google-plus-square"></i>
+              <label>
+                <SiGmail />
+              </label>
             </a>
           </div>
         </div>
