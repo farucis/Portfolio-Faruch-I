@@ -25,11 +25,11 @@ const Project = () => {
     });
 
     if (
-      Math.round(width > 810 ? x / offseting : (x - 100) / offseting) + 1 <=
+      Math.round(width > 810 ? x / offseting : (x - 130) / offseting) + 1 <=
       projectsDB.length - 1
     ) {
       let CurrentProjectOffset =
-        Math.round(width > 810 ? x / offseting : (x - 100) / offseting) + 1;
+        Math.round(width > 810 ? x / offseting : (x - 130) / offseting) + 1;
       setCurrentProject(projectsDB[CurrentProjectOffset].name);
     }
   };
