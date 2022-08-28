@@ -32,8 +32,9 @@
   min-width: 260px;
   margin: 30px;
   transform: scale(1);
-  transition: all 0.8s ease-out 0.2s;
   transition-delay: 0.2s;
+
+  transition: all 0.8s ease-out;
 
   opacity: 0.72;
   background-size: cover;
@@ -54,8 +55,9 @@
     rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
   z-index: 100;
-  transition: all 0.8s ease-in-out 0.2s;
   transition-delay: 0.3s;
+
+  transition: all 0.8s ease-in-out;
   background-color: #e6f7ff;
 }
 
@@ -261,6 +263,11 @@
   .demo-projects-parent section {
     scroll-snap-align: center;
     margin: 5vw;
+    transition-delay: 0s;
+    transition: all 0.6s ease-out;
+  }
+  .demo-projects-parent .current-project {
+    transition: all 0.4s ease-in-out;
   }
 }
 

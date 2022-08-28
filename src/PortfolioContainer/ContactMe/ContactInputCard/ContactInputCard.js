@@ -4,15 +4,28 @@ import emailjs from "emailjs-com";
 import { serviceID, templateID, userID } from "./emailjsKey";
 
 const ContactInputCard = () => {
+  //const [inputsValid, setInputsValid] = React.useState([true, true, true]);
+  const inputsValid = [true, true, true];
+
+  const formHandler = (e) => {
+    //e.target["name"].value.length < 1 && setInputsValid([false, true, true]);
+    //e.target["user_email"].value.length < 1 && setInputsValid([true, false, true]);
+    //e.target["message"].value.length < 1 && setInputsValid([true, true, false]);
+
+    console.log(inputsValid);
+    inputsValid.nameInput && inputsValid.emailinput && inputsValid.messageInput
+      ? sendEmail(e)
+      : e.preventDefault();
+  };
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm(serviceID, templateID, e.target, userID).then(
       (result) => {
         console.log(result);
-        document.getElementById("contact-form").reset();
+        e.target.reset();
       },
       (error) => {
-        console.log(error);
+        //console.log(error);
       }
     );
 
@@ -24,7 +37,8 @@ const ContactInputCard = () => {
       <div className="contact-input">
         <form
           id="contact-form"
-          onSubmit={sendEmail}
+          name="contact-form"
+          onSubmit={formHandler}
           style={{
             display: "flex",
             flexDirection: "column",

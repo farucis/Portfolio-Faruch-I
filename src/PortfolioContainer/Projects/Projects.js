@@ -16,7 +16,7 @@ const Project = () => {
   const projectsScrollRef = React.useRef(null);
   const { x } = useScroll(projectsScrollRef);
   const offseting = 320;
-  const [currentProject, setCurrentProject] = React.useState("Portfolio");
+  const [currentProject, setCurrentProject] = React.useState("");
 
   const scrollToNext = (ref) => {
     ref.current.scrollTo({
@@ -61,8 +61,21 @@ const Project = () => {
   };
 
   React.useEffect(() => {
-    scrollByOffset(projectsScrollRef, "Portfolio");
+    scrollByOffset(projectsScrollRef, "Test Cases");
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  React.useEffect(() => {
+    if (width < 810) {
+      for (let i = 0; i < projectsDB.length; i++)
+        if (
+          document.getElementById(projectsDB[i].name).offsetLeft + 130 >= x &&
+          document.getElementById(projectsDB[i].name).offsetLeft - 130 <= x
+        ) {
+          setCurrentProject(projectsDB[i].name);
+          break;
+        }
+    }
+  }, [x]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="demo-projects-container">
@@ -199,12 +212,20 @@ const Counter = ({
   return (
     <div className="counter-container">
       {width < 810 && (
-        <label className="arrow-icon">
+        <label
+          className="arrow-icon"
+          style={
+            currentProject === projectsDB[0].name
+              ? { visibility: "hidden" }
+              : {}
+          }
+        >
           <i onClick={() => scrollToBack(projectsScrollRef)}>
             <FaLongArrowAltLeft />
           </i>
         </label>
       )}
+
       {projectsDB.map((project, index) => (
         <div
           key={index}
@@ -216,7 +237,14 @@ const Counter = ({
         />
       ))}
       {width < 810 && (
-        <label className="arrow-icon">
+        <label
+          className="arrow-icon"
+          style={
+            currentProject === projectsDB[projectsDB.length - 1].name
+              ? { visibility: "hidden" }
+              : {}
+          }
+        >
           <i onClick={() => scrollToNext(projectsScrollRef)}>
             <FaLongArrowAltRight />
           </i>
