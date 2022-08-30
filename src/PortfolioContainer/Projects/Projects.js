@@ -19,6 +19,16 @@ const Project = () => {
   const [currentProject, setCurrentProject] = React.useState("");
 
   const scrollToNext = (ref) => {
+    const arrow = document.getElementById("arrow-right");
+    const arrowM = document.getElementById("arrow-rightM");
+    arrow?.classList.add("arrow--right");
+    arrowM?.classList.add("arrow--right");
+
+    setTimeout(() => {
+      arrow?.classList.remove("arrow--right");
+      arrowM?.classList.remove("arrow--right");
+    }, 1800);
+
     ref.current.scrollTo({
       left: width > 810 ? x + offseting : x + offseting - 100,
       behavior: "smooth",
@@ -35,6 +45,16 @@ const Project = () => {
   };
 
   const scrollToBack = (ref) => {
+    const arrow = document.getElementById("arrow-left");
+    const arrowM = document.getElementById("arrow-leftM");
+    arrow?.classList.add("arrow--left");
+    arrowM?.classList.add("arrow--left");
+
+    setTimeout(() => {
+      arrow?.classList.remove("arrow--left");
+      arrowM?.classList.remove("arrow--left");
+    }, 1800);
+
     ref.current.scrollTo({
       left: width > 810 ? x - offseting : x - offseting - 100,
       behavior: "smooth",
@@ -83,13 +103,16 @@ const Project = () => {
       <div className="demo-projects-parent">
         {width > 810 ? (
           <button
-            className="btn primary-btn"
-            style={{ width: "120px" }}
+            className="p-btn"
             onClick={() => scrollToBack(projectsScrollRef)}
           >
-            <FaArrowLeft /> Previous
+            <div id="arrow-left" className="arrow">
+              <FaArrowLeft />
+            </div>
+            <span>back</span>
           </button>
         ) : null}
+
         <div className="p-scroll" ref={projectsScrollRef}>
           <BlankSpace place="start" />
           {projectsDB.map((project, index) => (
@@ -113,11 +136,13 @@ const Project = () => {
         </div>
         {width > 810 ? (
           <button
-            className="btn primary-btn"
-            style={{ width: "120px" }}
+            className="p-btn"
             onClick={() => scrollToNext(projectsScrollRef)}
           >
-            Next <FaArrowRight />
+            <span>Next</span>
+            <div id="arrow-right" className="arrow">
+              <FaArrowRight />
+            </div>
           </button>
         ) : null}
       </div>
@@ -220,7 +245,7 @@ const Counter = ({
               : {}
           }
         >
-          <i onClick={() => scrollToBack(projectsScrollRef)}>
+          <i id="arrow-leftM" onClick={() => scrollToBack(projectsScrollRef)}>
             <FaLongArrowAltLeft />
           </i>
         </label>
@@ -245,7 +270,7 @@ const Counter = ({
               : {}
           }
         >
-          <i onClick={() => scrollToNext(projectsScrollRef)}>
+          <i id="arrow-rightM" onClick={() => scrollToNext(projectsScrollRef)}>
             <FaLongArrowAltRight />
           </i>
         </label>
