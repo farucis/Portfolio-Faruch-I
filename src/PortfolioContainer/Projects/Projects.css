@@ -211,9 +211,13 @@
   background-color: rgb(248, 211, 207);
 }
 .video-show {
-  align-self: center;
-  background-color: rgb(44, 44, 44);
+  display: flex;
   height: 200px;
+  width: 90%;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(44, 44, 44, 0.81);
 }
 .p-btn {
   display: flex;

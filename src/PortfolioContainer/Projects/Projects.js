@@ -129,7 +129,10 @@ const Project = () => {
                 scrollByOffset(projectsScrollRef, project.name)
               }
             >
-              <ProjectSection project={project} />
+              <ProjectSection
+                currentProject={currentProject}
+                project={project}
+              />
             </section>
           ))}
           <BlankSpace place="end" />
@@ -156,17 +159,24 @@ const Project = () => {
   );
 };
 
-const ProjectSection = ({ project }) => {
+const ProjectSection = ({ project, currentProject }) => {
+  const [showVideo, setShowVideo] = React.useState(false);
+
+  React.useEffect(() => {
+    if (currentProject !== project.name) setShowVideo(false);
+  }, [currentProject]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const ShowVideo = () => {
     if (project.video_url) {
       return (
-        <video className="video-show" width="90%" height="160px" controls>
-          <source src={project.video_url} type="video/mp4" />
-        </video>
+        <div className="video-show">
+          <video width="100%" height="140px" controls>
+            <source src={project.video_url} type="video/mp4" />
+          </video>
+        </div>
       );
     }
   };
-  const [showVideo, setShowVideo] = React.useState(false);
 
   return (
     <div className="project-section-container">
@@ -198,7 +208,7 @@ const ProjectSection = ({ project }) => {
               className="btn primary-btn"
               onClick={() => setShowVideo(!showVideo)}
             >
-              <span>App Video</span>
+              {!showVideo ? <span>App Video</span> : <span>Close Video</span>}
             </button>
           )}
 
