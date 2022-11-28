@@ -23,11 +23,11 @@ const ContactInfoCard = () => {
                 <FaGithubSquare />
               </label>
             </a>
-            <a href="https://github.com/farucis">
+            <i >
               <label>
                 <SiGmail />
               </label>
-            </a>
+            </i>
           </div>
         </div>
       </div>

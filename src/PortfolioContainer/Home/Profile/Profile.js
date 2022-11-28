@@ -22,7 +22,7 @@ const Profile = () => {
                   <FaGithubSquare />
                 </label>
               </a>
-              <a href="https://github.com/farucis">
+              <a href="#Contact" onClick={() => scrollTolocation()}>
                 <label>
                   <SiGmail />
                 </label>
@@ -69,7 +69,7 @@ const Profile = () => {
             >
               Hire Me
             </button>
-            <a href="Faruch - CV.pdf" download="Faruch Ismailov CV">
+            <a href="Faruch Ismailov - CV.pdf" download="Faruch Ismailov - CV">
               <button className="btn highlighted-btn">Get Resume</button>
             </a>
           </div>
