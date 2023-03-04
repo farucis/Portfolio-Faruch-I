@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/protfolio-faruch-i/static/css/main.81a0b969.chunk.css",
+    "main.js": "/protfolio-faruch-i/static/js/main.66ac025d.chunk.js",
+    "main.js.map": "/protfolio-faruch-i/static/js/main.66ac025d.chunk.js.map",
+    "runtime-main.js": "/protfolio-faruch-i/static/js/runtime-main.b68d4abe.js",
+    "runtime-main.js.map": "/protfolio-faruch-i/static/js/runtime-main.b68d4abe.js.map",
+    "static/js/2.8cfcf049.chunk.js": "/protfolio-faruch-i/static/js/2.8cfcf049.chunk.js",
+    "static/js/2.8cfcf049.chunk.js.map": "/protfolio-faruch-i/static/js/2.8cfcf049.chunk.js.map",
+    "static/js/3.744623df.chunk.js": "/protfolio-faruch-i/static/js/3.744623df.chunk.js",
+    "static/js/3.744623df.chunk.js.map": "/protfolio-faruch-i/static/js/3.744623df.chunk.js.map",
+    "index.html": "/protfolio-faruch-i/index.html",
+    "static/css/main.81a0b969.chunk.css.map": "/protfolio-faruch-i/static/css/main.81a0b969.chunk.css.map",
+    "static/js/2.8cfcf049.chunk.js.LICENSE.txt": "/protfolio-faruch-i/static/js/2.8cfcf049.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/protfolio-faruch-i/static/media/Poppins-Thin.a61eaf4c.ttf",
+    "static/media/Home.css": "/protfolio-faruch-i/static/media/bg.d580cd37.jpg",
+    "static/media/mailz.jpeg": "/protfolio-faruch-i/static/media/mailz.d13d5e32.jpeg",
+    "static/media/AboutCard.css": "/protfolio-faruch-i/static/media/profilephoto.e1ab294f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b68d4abe.js",
+    "static/js/2.8cfcf049.chunk.js",
+    "static/css/main.81a0b969.chunk.css",
+    "static/js/main.66ac025d.chunk.js"
+  ]
+}
