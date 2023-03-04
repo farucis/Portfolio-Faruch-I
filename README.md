@@ -1,6 +1,6 @@
 # A Personal Portfolio website to showcase all my details and projects at one place
 ## Demo app link:
-https://portfolio-faruch.herokuapp.com/
+https://farucis.github.io/Portfolio-Faruch-I/
 
 
 ## App Video:
